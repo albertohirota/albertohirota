@@ -13,8 +13,8 @@
 		700B047A1D52D8F60000B0E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 700B04791D52D8F60000B0E4 /* Assets.xcassets */; };
 		700B047D1D52D8F60000B0E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 700B047B1D52D8F60000B0E4 /* LaunchScreen.storyboard */; };
 		700B04851D52DCA20000B0E4 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700B04841D52DCA20000B0E4 /* Character.swift */; };
-		700B04871D52DEF30000B0E4 /* Soldier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700B04861D52DEF30000B0E4 /* Soldier.swift */; };
-		700B04891D52E3430000B0E4 /* Ogre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700B04881D52E3430000B0E4 /* Ogre.swift */; };
+		700B04871D52DEF30000B0E4 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700B04861D52DEF30000B0E4 /* Player.swift */; };
+		700B04891D52E3430000B0E4 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700B04881D52E3430000B0E4 /* Enemy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +26,8 @@
 		700B047C1D52D8F60000B0E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		700B047E1D52D8F60000B0E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		700B04841D52DCA20000B0E4 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
-		700B04861D52DEF30000B0E4 /* Soldier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Soldier.swift; sourceTree = "<group>"; };
-		700B04881D52E3430000B0E4 /* Ogre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ogre.swift; sourceTree = "<group>"; };
+		700B04861D52DEF30000B0E4 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		700B04881D52E3430000B0E4 /* Enemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +67,8 @@
 				700B047B1D52D8F60000B0E4 /* LaunchScreen.storyboard */,
 				700B047E1D52D8F60000B0E4 /* Info.plist */,
 				700B04841D52DCA20000B0E4 /* Character.swift */,
-				700B04861D52DEF30000B0E4 /* Soldier.swift */,
-				700B04881D52E3430000B0E4 /* Ogre.swift */,
+				700B04861D52DEF30000B0E4 /* Player.swift */,
+				700B04881D52E3430000B0E4 /* Enemy.swift */,
 			);
 			path = "Exercise 4 - OOP";
 			sourceTree = "<group>";
@@ -144,10 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				700B04891D52E3430000B0E4 /* Ogre.swift in Sources */,
+				700B04891D52E3430000B0E4 /* Enemy.swift in Sources */,
 				700B04851D52DCA20000B0E4 /* Character.swift in Sources */,
 				700B04751D52D8F60000B0E4 /* ViewController.swift in Sources */,
-				700B04871D52DEF30000B0E4 /* Soldier.swift in Sources */,
+				700B04871D52DEF30000B0E4 /* Player.swift in Sources */,
 				700B04731D52D8F60000B0E4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
