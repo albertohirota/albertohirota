@@ -9,17 +9,34 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    @IBOutlet weak var manbg: UIImageView!
+    @IBOutlet weak var manGround: UIImageView!
+    @IBOutlet weak var snailBg: UIImageView!
+    @IBOutlet weak var snailGround: UIImageView!
+    @IBOutlet weak var penalty1: UIImageView!
+    @IBOutlet weak var penalty2: UIImageView!
+    @IBOutlet weak var penalty3: UIImageView!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+   
+    
+    func preStart() {
+        snailBg.hidden = true
+        snailGround.hidden = true
+        manbg.hidden = false
+        manGround.hidden = false
+        penalty1.hidden = false
+        penalty2.hidden = false
+        penalty3.hidden = false
     }
-
-
+    
+    
 }
 
