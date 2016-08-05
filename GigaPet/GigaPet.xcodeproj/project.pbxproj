@@ -12,6 +12,11 @@
 		7056FC921D54461900B111EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7056FC901D54461900B111EC /* Main.storyboard */; };
 		7056FC941D54461900B111EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7056FC931D54461900B111EC /* Assets.xcassets */; };
 		7056FC971D54461900B111EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7056FC951D54461900B111EC /* LaunchScreen.storyboard */; };
+		7056FCA31D54CE2600B111EC /* bite.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7056FC9E1D54CE2600B111EC /* bite.wav */; };
+		7056FCA41D54CE2600B111EC /* cave-music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7056FC9F1D54CE2600B111EC /* cave-music.mp3 */; };
+		7056FCA51D54CE2600B111EC /* death.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7056FCA01D54CE2600B111EC /* death.wav */; };
+		7056FCA61D54CE2600B111EC /* heart.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7056FCA11D54CE2600B111EC /* heart.wav */; };
+		7056FCA71D54CE2600B111EC /* skull.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7056FCA21D54CE2600B111EC /* skull.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		7056FC931D54461900B111EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7056FC961D54461900B111EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7056FC981D54461900B111EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7056FC9E1D54CE2600B111EC /* bite.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bite.wav; sourceTree = "<group>"; };
+		7056FC9F1D54CE2600B111EC /* cave-music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cave-music.mp3"; sourceTree = "<group>"; };
+		7056FCA01D54CE2600B111EC /* death.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = death.wav; sourceTree = "<group>"; };
+		7056FCA11D54CE2600B111EC /* heart.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = heart.wav; sourceTree = "<group>"; };
+		7056FCA21D54CE2600B111EC /* skull.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = skull.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +69,11 @@
 				7056FC901D54461900B111EC /* Main.storyboard */,
 				7056FC931D54461900B111EC /* Assets.xcassets */,
 				7056FC951D54461900B111EC /* LaunchScreen.storyboard */,
+				7056FC9E1D54CE2600B111EC /* bite.wav */,
+				7056FC9F1D54CE2600B111EC /* cave-music.mp3 */,
+				7056FCA01D54CE2600B111EC /* death.wav */,
+				7056FCA11D54CE2600B111EC /* heart.wav */,
+				7056FCA21D54CE2600B111EC /* skull.wav */,
 				7056FC981D54461900B111EC /* Info.plist */,
 			);
 			path = GigaPet;
@@ -122,6 +137,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7056FCA71D54CE2600B111EC /* skull.wav in Resources */,
+				7056FCA31D54CE2600B111EC /* bite.wav in Resources */,
+				7056FCA51D54CE2600B111EC /* death.wav in Resources */,
+				7056FCA61D54CE2600B111EC /* heart.wav in Resources */,
+				7056FCA41D54CE2600B111EC /* cave-music.mp3 in Resources */,
 				7056FC971D54461900B111EC /* LaunchScreen.storyboard in Resources */,
 				7056FC941D54461900B111EC /* Assets.xcassets in Resources */,
 				7056FC921D54461900B111EC /* Main.storyboard in Resources */,
@@ -288,6 +308,7 @@
 				7056FC9D1D54461900B111EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
