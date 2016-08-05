@@ -18,6 +18,9 @@
 		7056FCA61D54CE2600B111EC /* heart.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7056FCA11D54CE2600B111EC /* heart.wav */; };
 		7056FCA71D54CE2600B111EC /* skull.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7056FCA21D54CE2600B111EC /* skull.wav */; };
 		7056FCA91D54ED9400B111EC /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7056FCA81D54ED9400B111EC /* Sound.swift */; };
+		7056FCAB1D54F52C00B111EC /* select.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7056FCAA1D54F52C00B111EC /* select.wav */; };
+		7056FCAD1D54FC3D00B111EC /* DragImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7056FCAC1D54FC3D00B111EC /* DragImg.swift */; };
+		7056FCAF1D5500BE00B111EC /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7056FCAE1D5500BE00B111EC /* Images.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		7056FCA11D54CE2600B111EC /* heart.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = heart.wav; sourceTree = "<group>"; };
 		7056FCA21D54CE2600B111EC /* skull.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = skull.wav; sourceTree = "<group>"; };
 		7056FCA81D54ED9400B111EC /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		7056FCAA1D54F52C00B111EC /* select.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = select.wav; sourceTree = "<group>"; };
+		7056FCAC1D54FC3D00B111EC /* DragImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragImg.swift; sourceTree = "<group>"; };
+		7056FCAE1D5500BE00B111EC /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +82,11 @@
 				7056FCA01D54CE2600B111EC /* death.wav */,
 				7056FCA11D54CE2600B111EC /* heart.wav */,
 				7056FCA21D54CE2600B111EC /* skull.wav */,
+				7056FCAA1D54F52C00B111EC /* select.wav */,
 				7056FC981D54461900B111EC /* Info.plist */,
 				7056FCA81D54ED9400B111EC /* Sound.swift */,
+				7056FCAC1D54FC3D00B111EC /* DragImg.swift */,
+				7056FCAE1D5500BE00B111EC /* Images.swift */,
 			);
 			path = GigaPet;
 			sourceTree = "<group>";
@@ -141,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7056FCA71D54CE2600B111EC /* skull.wav in Resources */,
+				7056FCAB1D54F52C00B111EC /* select.wav in Resources */,
 				7056FCA31D54CE2600B111EC /* bite.wav in Resources */,
 				7056FCA51D54CE2600B111EC /* death.wav in Resources */,
 				7056FCA61D54CE2600B111EC /* heart.wav in Resources */,
@@ -160,7 +170,9 @@
 			files = (
 				7056FCA91D54ED9400B111EC /* Sound.swift in Sources */,
 				7056FC8F1D54461900B111EC /* ViewController.swift in Sources */,
+				7056FCAF1D5500BE00B111EC /* Images.swift in Sources */,
 				7056FC8D1D54461900B111EC /* AppDelegate.swift in Sources */,
+				7056FCAD1D54FC3D00B111EC /* DragImg.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
