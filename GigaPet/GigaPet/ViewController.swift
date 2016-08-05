@@ -18,6 +18,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var penalty1: UIImageView!
     @IBOutlet weak var penalty2: UIImageView!
     @IBOutlet weak var penalty3: UIImageView!
+    @IBOutlet weak var foodImg: UIImageView!
+    @IBOutlet weak var fruitImg: UIImageView!
+    @IBOutlet weak var heartImg: UIImageView!
     
     
 
