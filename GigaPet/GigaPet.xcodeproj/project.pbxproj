@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		7056FC8D1D54461900B111EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7056FC8C1D54461900B111EC /* AppDelegate.swift */; };
 		7056FC8F1D54461900B111EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7056FC8E1D54461900B111EC /* ViewController.swift */; };
-		7056FC921D54461900B111EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7056FC901D54461900B111EC /* Main.storyboard */; };
+		7056FC921D54461900B111EC /* Main1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7056FC901D54461900B111EC /* Main1.storyboard */; };
 		7056FC941D54461900B111EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7056FC931D54461900B111EC /* Assets.xcassets */; };
 		7056FC971D54461900B111EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7056FC951D54461900B111EC /* LaunchScreen.storyboard */; };
 		7056FCA31D54CE2600B111EC /* bite.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7056FC9E1D54CE2600B111EC /* bite.wav */; };
@@ -20,14 +20,14 @@
 		7056FCA91D54ED9400B111EC /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7056FCA81D54ED9400B111EC /* Sound.swift */; };
 		7056FCAB1D54F52C00B111EC /* select.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7056FCAA1D54F52C00B111EC /* select.wav */; };
 		7056FCAD1D54FC3D00B111EC /* DragImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7056FCAC1D54FC3D00B111EC /* DragImg.swift */; };
-		7056FCAF1D5500BE00B111EC /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7056FCAE1D5500BE00B111EC /* Images.swift */; };
+		7056FCB31D55758D00B111EC /* AnimationImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7056FCB21D55758D00B111EC /* AnimationImg.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7056FC891D54461900B111EC /* GigaPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GigaPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7056FC8C1D54461900B111EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7056FC8E1D54461900B111EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7056FC911D54461900B111EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7056FC911D54461900B111EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main1.storyboard; sourceTree = "<group>"; };
 		7056FC931D54461900B111EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7056FC961D54461900B111EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7056FC981D54461900B111EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -39,7 +39,7 @@
 		7056FCA81D54ED9400B111EC /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 		7056FCAA1D54F52C00B111EC /* select.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = select.wav; sourceTree = "<group>"; };
 		7056FCAC1D54FC3D00B111EC /* DragImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragImg.swift; sourceTree = "<group>"; };
-		7056FCAE1D5500BE00B111EC /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		7056FCB21D55758D00B111EC /* AnimationImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationImg.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			children = (
 				7056FC8C1D54461900B111EC /* AppDelegate.swift */,
 				7056FC8E1D54461900B111EC /* ViewController.swift */,
-				7056FC901D54461900B111EC /* Main.storyboard */,
+				7056FC901D54461900B111EC /* Main1.storyboard */,
 				7056FC931D54461900B111EC /* Assets.xcassets */,
 				7056FC951D54461900B111EC /* LaunchScreen.storyboard */,
 				7056FC9E1D54CE2600B111EC /* bite.wav */,
@@ -86,7 +86,7 @@
 				7056FC981D54461900B111EC /* Info.plist */,
 				7056FCA81D54ED9400B111EC /* Sound.swift */,
 				7056FCAC1D54FC3D00B111EC /* DragImg.swift */,
-				7056FCAE1D5500BE00B111EC /* Images.swift */,
+				7056FCB21D55758D00B111EC /* AnimationImg.swift */,
 			);
 			path = GigaPet;
 			sourceTree = "<group>";
@@ -157,7 +157,7 @@
 				7056FCA41D54CE2600B111EC /* cave-music.mp3 in Resources */,
 				7056FC971D54461900B111EC /* LaunchScreen.storyboard in Resources */,
 				7056FC941D54461900B111EC /* Assets.xcassets in Resources */,
-				7056FC921D54461900B111EC /* Main.storyboard in Resources */,
+				7056FC921D54461900B111EC /* Main1.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,7 +170,7 @@
 			files = (
 				7056FCA91D54ED9400B111EC /* Sound.swift in Sources */,
 				7056FC8F1D54461900B111EC /* ViewController.swift in Sources */,
-				7056FCAF1D5500BE00B111EC /* Images.swift in Sources */,
+				7056FCB31D55758D00B111EC /* AnimationImg.swift in Sources */,
 				7056FC8D1D54461900B111EC /* AppDelegate.swift in Sources */,
 				7056FCAD1D54FC3D00B111EC /* DragImg.swift in Sources */,
 			);
@@ -179,12 +179,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7056FC901D54461900B111EC /* Main.storyboard */ = {
+		7056FC901D54461900B111EC /* Main1.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				7056FC911D54461900B111EC /* Base */,
 			);
-			name = Main.storyboard;
+			name = Main1.storyboard;
 			sourceTree = "<group>";
 		};
 		7056FC951D54461900B111EC /* LaunchScreen.storyboard */ = {

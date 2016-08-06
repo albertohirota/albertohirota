@@ -12,6 +12,7 @@ import UIKit
 class DragImg: UIImageView {
     var originalPosition: CGPoint!
     var dropTarget: UIView?
+   // var onTargetDropped = 0
     
     override init(frame: CGRect) { //overriding frame image movement
         super.init(frame: frame)
@@ -29,7 +30,26 @@ class DragImg: UIImageView {
         }
     }
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+     if let touch = touches.first, let target = dropTarget {
+        let position = touch.locationInView(self.superview)
+        if CGRectContainsPoint(target.frame, position) {
+            NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "onTargetDropped", object: nil))
+        }
+     }
         self.center = originalPosition
     }
-
+    
+//    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == "NomeDaSegue" {
+//            let svc = segue.destinationViewController as! ViewController
+//            
+//            svc.targetOn = onTargetDropped
+//            svc.gameOver()
+//        }
+//    }
+//
+    
 }
+
+
+
