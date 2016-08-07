@@ -1,0 +1,327 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		70FF276A1D56E4C000D6516F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FF27691D56E4C000D6516F /* AppDelegate.swift */; };
+		70FF276C1D56E4C000D6516F /* MainVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FF276B1D56E4C000D6516F /* MainVc.swift */; };
+		70FF27711D56E4C000D6516F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70FF27701D56E4C000D6516F /* Assets.xcassets */; };
+		70FF27741D56E4C000D6516F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70FF27721D56E4C000D6516F /* LaunchScreen.storyboard */; };
+		70FF277C1D56E50200D6516F /* MainVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70FF277B1D56E50200D6516F /* MainVc.xib */; };
+		70FF27821D56E64700D6516F /* aboutHobbitonVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FF27801D56E64700D6516F /* aboutHobbitonVc.swift */; };
+		70FF27831D56E64700D6516F /* aboutHobbitonVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70FF27811D56E64700D6516F /* aboutHobbitonVc.xib */; };
+		70FF27881D56E68000D6516F /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FF27861D56E68000D6516F /* Photos.swift */; };
+		70FF27891D56E68000D6516F /* Photos.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70FF27871D56E68000D6516F /* Photos.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		70FF27661D56E4C000D6516F /* Hobbiton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hobbiton.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		70FF27691D56E4C000D6516F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		70FF276B1D56E4C000D6516F /* MainVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVc.swift; sourceTree = "<group>"; };
+		70FF27701D56E4C000D6516F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		70FF27731D56E4C000D6516F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		70FF27751D56E4C000D6516F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70FF277B1D56E50200D6516F /* MainVc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainVc.xib; sourceTree = "<group>"; };
+		70FF27801D56E64700D6516F /* aboutHobbitonVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = aboutHobbitonVc.swift; sourceTree = "<group>"; };
+		70FF27811D56E64700D6516F /* aboutHobbitonVc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = aboutHobbitonVc.xib; sourceTree = "<group>"; };
+		70FF27861D56E68000D6516F /* Photos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		70FF27871D56E68000D6516F /* Photos.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Photos.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		70FF27631D56E4C000D6516F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		70FF275D1D56E4C000D6516F = {
+			isa = PBXGroup;
+			children = (
+				70FF27681D56E4C000D6516F /* Hobbiton */,
+				70FF27671D56E4C000D6516F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		70FF27671D56E4C000D6516F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70FF27661D56E4C000D6516F /* Hobbiton.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70FF27681D56E4C000D6516F /* Hobbiton */ = {
+			isa = PBXGroup;
+			children = (
+				70FF277F1D56E5F200D6516F /* View */,
+				70FF277E1D56E5EB00D6516F /* Controller */,
+				70FF277D1D56E5E300D6516F /* Model */,
+				70FF27701D56E4C000D6516F /* Assets.xcassets */,
+				70FF27721D56E4C000D6516F /* LaunchScreen.storyboard */,
+				70FF27751D56E4C000D6516F /* Info.plist */,
+			);
+			path = Hobbiton;
+			sourceTree = "<group>";
+		};
+		70FF277D1D56E5E300D6516F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		70FF277E1D56E5EB00D6516F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				70FF276B1D56E4C000D6516F /* MainVc.swift */,
+				70FF27801D56E64700D6516F /* aboutHobbitonVc.swift */,
+				70FF27861D56E68000D6516F /* Photos.swift */,
+				70FF27691D56E4C000D6516F /* AppDelegate.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		70FF277F1D56E5F200D6516F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				70FF277B1D56E50200D6516F /* MainVc.xib */,
+				70FF27811D56E64700D6516F /* aboutHobbitonVc.xib */,
+				70FF27871D56E68000D6516F /* Photos.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		70FF27651D56E4C000D6516F /* Hobbiton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70FF27781D56E4C000D6516F /* Build configuration list for PBXNativeTarget "Hobbiton" */;
+			buildPhases = (
+				70FF27621D56E4C000D6516F /* Sources */,
+				70FF27631D56E4C000D6516F /* Frameworks */,
+				70FF27641D56E4C000D6516F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hobbiton;
+			productName = Hobbiton;
+			productReference = 70FF27661D56E4C000D6516F /* Hobbiton.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		70FF275E1D56E4C000D6516F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Alberto Hirota";
+				TargetAttributes = {
+					70FF27651D56E4C000D6516F = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 70FF27611D56E4C000D6516F /* Build configuration list for PBXProject "Hobbiton" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 70FF275D1D56E4C000D6516F;
+			productRefGroup = 70FF27671D56E4C000D6516F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				70FF27651D56E4C000D6516F /* Hobbiton */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		70FF27641D56E4C000D6516F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70FF27741D56E4C000D6516F /* LaunchScreen.storyboard in Resources */,
+				70FF27831D56E64700D6516F /* aboutHobbitonVc.xib in Resources */,
+				70FF277C1D56E50200D6516F /* MainVc.xib in Resources */,
+				70FF27711D56E4C000D6516F /* Assets.xcassets in Resources */,
+				70FF27891D56E68000D6516F /* Photos.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		70FF27621D56E4C000D6516F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70FF27881D56E68000D6516F /* Photos.swift in Sources */,
+				70FF276C1D56E4C000D6516F /* MainVc.swift in Sources */,
+				70FF276A1D56E4C000D6516F /* AppDelegate.swift in Sources */,
+				70FF27821D56E64700D6516F /* aboutHobbitonVc.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		70FF27721D56E4C000D6516F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70FF27731D56E4C000D6516F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		70FF27761D56E4C000D6516F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		70FF27771D56E4C000D6516F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		70FF27791D56E4C000D6516F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Hobbiton/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tests.ts.Hobbiton;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		70FF277A1D56E4C000D6516F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Hobbiton/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tests.ts.Hobbiton;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		70FF27611D56E4C000D6516F /* Build configuration list for PBXProject "Hobbiton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70FF27761D56E4C000D6516F /* Debug */,
+				70FF27771D56E4C000D6516F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70FF27781D56E4C000D6516F /* Build configuration list for PBXNativeTarget "Hobbiton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70FF27791D56E4C000D6516F /* Debug */,
+				70FF277A1D56E4C000D6516F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 70FF275E1D56E4C000D6516F /* Project object */;
+}
