@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainVc" customModule="Hobbiton" customModuleProvider="target">
             <connections>
+                <outlet property="aboutHobbiton" destination="htQ-ip-WH0" id="PJJ-bZ-pKh"/>
+                <outlet property="photosBtn" destination="ts2-Zv-Aax" id="5bp-3I-FmI"/>
                 <outlet property="view" destination="mbY-0g-tvI" id="3mH-Ua-eS8"/>
             </connections>
         </placeholder>
@@ -18,18 +20,58 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hobbiton" translatesAutoresizingMaskIntoConstraints="NO" id="WhT-AP-yTY">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htQ-ip-WH0">
+                    <rect key="frame" x="50" y="542" width="200" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="fdB-hS-NLt"/>
+                        <constraint firstAttribute="width" constant="200" id="i9x-Jc-sm0"/>
+                    </constraints>
+                    <state key="normal" image="Blue Button"/>
+                    <connections>
+                        <action selector="aboutPressed:" destination="-1" eventType="touchUpInside" id="sFG-fj-0bm"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ts2-Zv-Aax">
+                    <rect key="frame" x="312" y="542" width="200" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="LXA-HA-dzr"/>
+                        <constraint firstAttribute="width" constant="200" id="cE6-t7-x5P"/>
+                    </constraints>
+                    <state key="normal" image="Green Button"/>
+                    <connections>
+                        <action selector="loadPhotos:" destination="-1" eventType="touchUpInside" id="CAK-7K-xXj"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="About Hobbiton" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTx-dd-1Sf">
+                    <rect key="frame" x="66" y="551" width="170" height="21"/>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="22"/>
+                    <color key="textColor" red="1" green="0.96552704281616608" blue="0.46515955728963998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Photos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Esa-Cw-igC">
+                    <rect key="frame" x="327" y="551" width="170" height="21"/>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="22"/>
+                    <color key="textColor" red="0.68518284991235201" green="1" blue="0.71195406285761065" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="0.96992741609999999" blue="0.76664024649999996" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="Esa-Cw-igC" firstAttribute="centerY" secondItem="ts2-Zv-Aax" secondAttribute="centerY" id="Alv-XL-Lz1"/>
+                <constraint firstItem="fTx-dd-1Sf" firstAttribute="centerY" secondItem="htQ-ip-WH0" secondAttribute="centerY" id="E0Q-pQ-KrO"/>
                 <constraint firstItem="WhT-AP-yTY" firstAttribute="top" secondItem="mbY-0g-tvI" secondAttribute="top" id="Kv9-CG-zUU"/>
+                <constraint firstItem="fTx-dd-1Sf" firstAttribute="centerX" secondItem="htQ-ip-WH0" secondAttribute="centerX" id="XDj-ag-Ruy"/>
                 <constraint firstAttribute="bottom" secondItem="WhT-AP-yTY" secondAttribute="bottom" id="aIA-gs-aZP"/>
                 <constraint firstAttribute="trailing" secondItem="WhT-AP-yTY" secondAttribute="trailing" id="fLE-3e-qXC"/>
                 <constraint firstItem="WhT-AP-yTY" firstAttribute="leading" secondItem="mbY-0g-tvI" secondAttribute="leading" id="jZ3-Dd-Aww"/>
+                <constraint firstItem="Esa-Cw-igC" firstAttribute="centerX" secondItem="ts2-Zv-Aax" secondAttribute="centerX" id="xwO-If-7gY"/>
             </constraints>
             <point key="canvasLocation" x="349" y="369"/>
         </view>
     </objects>
     <resources>
+        <image name="Blue Button" width="194" height="194"/>
+        <image name="Green Button" width="194" height="194"/>
         <image name="Hobbiton" width="1600" height="1066"/>
     </resources>
 </document>

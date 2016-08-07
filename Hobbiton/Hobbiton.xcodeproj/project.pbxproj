@@ -12,8 +12,8 @@
 		70FF27711D56E4C000D6516F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70FF27701D56E4C000D6516F /* Assets.xcassets */; };
 		70FF27741D56E4C000D6516F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70FF27721D56E4C000D6516F /* LaunchScreen.storyboard */; };
 		70FF277C1D56E50200D6516F /* MainVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70FF277B1D56E50200D6516F /* MainVc.xib */; };
-		70FF27821D56E64700D6516F /* aboutHobbitonVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FF27801D56E64700D6516F /* aboutHobbitonVc.swift */; };
-		70FF27831D56E64700D6516F /* aboutHobbitonVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70FF27811D56E64700D6516F /* aboutHobbitonVc.xib */; };
+		70FF27821D56E64700D6516F /* AboutHobbitonVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FF27801D56E64700D6516F /* AboutHobbitonVc.swift */; };
+		70FF27831D56E64700D6516F /* AboutHobbitonVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70FF27811D56E64700D6516F /* AboutHobbitonVc.xib */; };
 		70FF27881D56E68000D6516F /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FF27861D56E68000D6516F /* Photos.swift */; };
 		70FF27891D56E68000D6516F /* Photos.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70FF27871D56E68000D6516F /* Photos.xib */; };
 /* End PBXBuildFile section */
@@ -26,8 +26,8 @@
 		70FF27731D56E4C000D6516F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70FF27751D56E4C000D6516F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70FF277B1D56E50200D6516F /* MainVc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainVc.xib; sourceTree = "<group>"; };
-		70FF27801D56E64700D6516F /* aboutHobbitonVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = aboutHobbitonVc.swift; sourceTree = "<group>"; };
-		70FF27811D56E64700D6516F /* aboutHobbitonVc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = aboutHobbitonVc.xib; sourceTree = "<group>"; };
+		70FF27801D56E64700D6516F /* AboutHobbitonVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutHobbitonVc.swift; sourceTree = "<group>"; };
+		70FF27811D56E64700D6516F /* AboutHobbitonVc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutHobbitonVc.xib; sourceTree = "<group>"; };
 		70FF27861D56E68000D6516F /* Photos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 		70FF27871D56E68000D6516F /* Photos.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Photos.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,7 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				70FF276B1D56E4C000D6516F /* MainVc.swift */,
-				70FF27801D56E64700D6516F /* aboutHobbitonVc.swift */,
+				70FF27801D56E64700D6516F /* AboutHobbitonVc.swift */,
 				70FF27861D56E68000D6516F /* Photos.swift */,
 				70FF27691D56E4C000D6516F /* AppDelegate.swift */,
 			);
@@ -94,7 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				70FF277B1D56E50200D6516F /* MainVc.xib */,
-				70FF27811D56E64700D6516F /* aboutHobbitonVc.xib */,
+				70FF27811D56E64700D6516F /* AboutHobbitonVc.xib */,
 				70FF27871D56E68000D6516F /* Photos.xib */,
 			);
 			name = View;
@@ -159,7 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70FF27741D56E4C000D6516F /* LaunchScreen.storyboard in Resources */,
-				70FF27831D56E64700D6516F /* aboutHobbitonVc.xib in Resources */,
+				70FF27831D56E64700D6516F /* AboutHobbitonVc.xib in Resources */,
 				70FF277C1D56E50200D6516F /* MainVc.xib in Resources */,
 				70FF27711D56E4C000D6516F /* Assets.xcassets in Resources */,
 				70FF27891D56E68000D6516F /* Photos.xib in Resources */,
@@ -176,7 +176,7 @@
 				70FF27881D56E68000D6516F /* Photos.swift in Sources */,
 				70FF276C1D56E4C000D6516F /* MainVc.swift in Sources */,
 				70FF276A1D56E4C000D6516F /* AppDelegate.swift in Sources */,
-				70FF27821D56E64700D6516F /* aboutHobbitonVc.swift in Sources */,
+				70FF27821D56E64700D6516F /* AboutHobbitonVc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +320,7 @@
 				70FF277A1D56E4C000D6516F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

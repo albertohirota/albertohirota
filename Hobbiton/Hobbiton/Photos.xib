@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Photos" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Photos" customModule="Hobbiton" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -13,7 +14,59 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Thomas-Zlabiroth-740x488" translatesAutoresizingMaskIntoConstraints="NO" id="S7T-sH-Rt4">
+                    <rect key="frame" x="0.0" y="0.0" width="303" height="203"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ci-hobbiton-movie-set-tours-1" translatesAutoresizingMaskIntoConstraints="NO" id="rUO-BP-DtN">
+                    <rect key="frame" x="0.0" y="203" width="303" height="203"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cu55-hobbiton-matamata-waikato-sara-orme-cropped.CkGEPw" translatesAutoresizingMaskIntoConstraints="NO" id="P6X-qA-W70">
+                    <rect key="frame" x="0.0" y="406" width="303" height="203"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Hobbiton" translatesAutoresizingMaskIntoConstraints="NO" id="Y9v-jr-C4Y">
+                    <rect key="frame" x="297" y="406" width="303" height="203"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hobbiton-movie-set" translatesAutoresizingMaskIntoConstraints="NO" id="sGQ-RJ-fI1">
+                    <rect key="frame" x="297" y="203" width="303" height="203"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="the-lush-countryside-of-the-shire" translatesAutoresizingMaskIntoConstraints="NO" id="Lqb-6L-B2n">
+                    <rect key="frame" x="297" y="0.0" width="303" height="203"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2F-Va-ZOh">
+                    <rect key="frame" x="351" y="523" width="200" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="i7L-g5-JkZ"/>
+                        <constraint firstAttribute="width" constant="194" id="sNy-Ez-Uyc"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="t8C-dT-gQV"/>
+                        <constraint firstAttribute="height" constant="30" id="u07-Pb-kST"/>
+                    </constraints>
+                    <state key="normal" image="Orange Button"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Return" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e07-HA-zo7">
+                    <rect key="frame" x="366" y="530" width="173" height="26"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                    <color key="textColor" red="0.24033477876368214" green="0.43841944906653518" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="x2F-Va-ZOh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="BWg-Co-bW2"/>
+                <constraint firstItem="e07-HA-zo7" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="DtB-Ph-Raf"/>
+                <constraint firstAttribute="bottom" secondItem="x2F-Va-ZOh" secondAttribute="bottom" constant="20" id="L9w-27-vkl"/>
+                <constraint firstAttribute="bottom" secondItem="e07-HA-zo7" secondAttribute="bottom" constant="20" id="NNt-gf-CnQ"/>
+                <constraint firstItem="e07-HA-zo7" firstAttribute="centerX" secondItem="x2F-Va-ZOh" secondAttribute="centerX" id="TGb-jz-6py"/>
+                <constraint firstItem="e07-HA-zo7" firstAttribute="centerY" secondItem="x2F-Va-ZOh" secondAttribute="centerY" id="mOj-W0-OoX"/>
+            </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="Hobbiton" width="1600" height="1066"/>
+        <image name="Orange Button" width="194" height="194"/>
+        <image name="Thomas-Zlabiroth-740x488" width="740" height="488"/>
+        <image name="ci-hobbiton-movie-set-tours-1" width="2953" height="1971"/>
+        <image name="cu55-hobbiton-matamata-waikato-sara-orme-cropped.CkGEPw" width="700" height="319"/>
+        <image name="hobbiton-movie-set" width="720" height="406"/>
+        <image name="the-lush-countryside-of-the-shire" width="720" height="406"/>
+    </resources>
 </document>
