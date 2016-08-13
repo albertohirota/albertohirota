@@ -82,11 +82,52 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
     }
     func loadPicker(gesture: UITapGestureRecognizer) {
-        imagePicker.allowsEditing = false
-        imagePicker.sourceType = .PhotoLibrary
+        let alert: UIAlertController=UIAlertController(title: "Picture Option", message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
+        let cameraAction = UIAlertAction(title: "Camera", style: UIAlertActionStyle.Default) {
+            UIAlertAction in
+            self.openCamera()
+        }
+        let gallaryAction = UIAlertAction(title: "Library", style: UIAlertActionStyle.Default) {
+            UIAlertAction in
+            self.openGallary()
+        }
         
-        presentViewController(imagePicker, animated: true, completion: nil)
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) {
+            UIAlertAction in self.cancel()
+        }
+        
+        alert.addAction(cameraAction)
+        alert.addAction(gallaryAction)
+        alert.addAction(cancelAction)
+        presentViewController(alert, animated: true, completion: nil)
+
+}
+    
+    func openCamera() {
+        if UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+            imagePicker.allowsEditing = false
+            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+            presentViewController(imagePicker, animated: true, completion: nil)
+
+        } else {
+            let alertWarning = UIAlertController(title: "Warning", message: "You don't have camera", preferredStyle: UIAlertControllerStyle.Alert)
+            let ok = UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil)
+            alertWarning.addAction(ok)
+            self.presentViewController(alertWarning, animated: true, completion: nil)
+        }
     }
+    
+    func openGallary() {
+            imagePicker.allowsEditing = false
+            imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+            
+            presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
+    func cancel() {
+        print("Cancel Clicked")
+    }
+    
     
     func showErrorAlert() {
         let alert = UIAlertController(title: "Select Person", message: "Please select a missing person to check and an image from your library", preferredStyle: UIAlertControllerStyle.Alert)
