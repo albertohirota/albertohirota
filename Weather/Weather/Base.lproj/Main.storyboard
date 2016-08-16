@@ -30,9 +30,9 @@
                                     <constraint firstAttribute="width" constant="300" id="Q1N-gr-eR1"/>
                                     <constraint firstAttribute="height" constant="30" id="avc-FL-CIc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="22"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01n" translatesAutoresizingMaskIntoConstraints="NO" id="ImP-Sg-kbf">
                                 <rect key="frame" x="210" y="94" width="180" height="180"/>
@@ -462,15 +462,28 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pab-f5-hzD">
+                                <rect key="frame" x="20" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jf0-oA-Bn2"/>
+                                    <constraint firstAttribute="width" constant="30" id="nhI-mZ-9xy"/>
+                                </constraints>
+                                <state key="normal" image="Screen Shot 2016-08-15 at 11.15.02 PM"/>
+                                <connections>
+                                    <action selector="updatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9T9-Uk-590"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96410256410256401" green="0.96410256410256401" blue="0.96410256410256401" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="6eq-wc-32S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5ZE-GK-p7E"/>
                             <constraint firstItem="ncw-f5-DlD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AyR-st-tIa"/>
                             <constraint firstItem="ImP-Sg-kbf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dia-qk-KeJ"/>
+                            <constraint firstItem="Pab-f5-hzD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Eob-eG-49r"/>
                             <constraint firstItem="p0X-XH-trG" firstAttribute="top" secondItem="ncw-f5-DlD" secondAttribute="bottom" constant="8" id="IgL-gL-9n4"/>
                             <constraint firstItem="hJ1-AB-w8f" firstAttribute="top" secondItem="6eq-wc-32S" secondAttribute="bottom" constant="1" id="PBx-sw-2yN"/>
                             <constraint firstItem="S8t-O6-cYI" firstAttribute="top" secondItem="p0X-XH-trG" secondAttribute="bottom" constant="10" id="Pj6-yz-IxB"/>
+                            <constraint firstItem="Pab-f5-hzD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Pvz-2G-Qb7"/>
                             <constraint firstItem="S8t-O6-cYI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QFm-g4-vkc"/>
                             <constraint firstItem="ncw-f5-DlD" firstAttribute="top" secondItem="UFU-T2-0by" secondAttribute="bottom" constant="12" id="Qwf-av-w01"/>
                             <constraint firstItem="6eq-wc-32S" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="cHV-fS-sD6"/>
@@ -483,6 +496,37 @@
                             <constraint firstItem="p0X-XH-trG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ywG-kY-1Kw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityLbl" destination="hJ1-AB-w8f" id="9Iv-ux-KxT"/>
+                        <outlet property="condImg1" destination="BLS-mc-SaD" id="eLE-mA-BOc"/>
+                        <outlet property="condImg2" destination="NRi-SV-GIm" id="Hdv-bi-0Le"/>
+                        <outlet property="condImg3" destination="4Ox-k8-oTw" id="Ew7-md-yOO"/>
+                        <outlet property="condImg4" destination="KI3-Zm-FcQ" id="5NP-XP-c0V"/>
+                        <outlet property="condImg5" destination="MyA-rB-aVM" id="bKd-Gv-jcD"/>
+                        <outlet property="dayOfWeek1Lbl" destination="9CO-v8-Nyf" id="pGc-2k-Nma"/>
+                        <outlet property="dayOfWeek2" destination="ZJ7-TZ-qXv" id="XIe-kM-HxB"/>
+                        <outlet property="dayOfWeek3" destination="NGv-t2-zY0" id="PDr-wC-xyX"/>
+                        <outlet property="dayOfWeek4" destination="5be-Iv-elG" id="Dlb-5W-faA"/>
+                        <outlet property="dayOfWeek5" destination="fmX-Br-aHs" id="zze-3x-Fpa"/>
+                        <outlet property="dayOfWeekLbl" destination="APE-Or-4rY" id="Xf7-Ot-LlG"/>
+                        <outlet property="humidityLbl" destination="dfj-6k-xwU" id="Hof-PV-kLW"/>
+                        <outlet property="mainImg" destination="ImP-Sg-kbf" id="dhS-fg-WN7"/>
+                        <outlet property="tempMax1" destination="a14-ER-sSJ" id="pAs-w0-zrV"/>
+                        <outlet property="tempMax2" destination="DUP-eJ-CiK" id="f1Y-I0-5qf"/>
+                        <outlet property="tempMax3" destination="lun-WR-WVg" id="ikw-Ol-279"/>
+                        <outlet property="tempMax4" destination="VZU-r5-wQe" id="rj5-qq-WyW"/>
+                        <outlet property="tempMax5" destination="dK8-pf-1gv" id="Cyu-t1-z84"/>
+                        <outlet property="tempMaxLbl" destination="eEc-e6-7EF" id="u7P-SQ-gyf"/>
+                        <outlet property="tempMin1" destination="a5A-mn-bFn" id="SgV-rJ-DjL"/>
+                        <outlet property="tempMin2" destination="a7W-er-6e0" id="LIn-r1-0oV"/>
+                        <outlet property="tempMin3" destination="hbZ-BV-0Gl" id="jac-JE-byG"/>
+                        <outlet property="tempMin4" destination="Yer-kG-1aD" id="v1M-j9-fXH"/>
+                        <outlet property="tempMin5" destination="KbW-Xb-MpA" id="VvH-Pv-oes"/>
+                        <outlet property="tempMinLbl" destination="qLt-gH-Jlp" id="rXT-yc-4qq"/>
+                        <outlet property="temperatureLbl" destination="UFU-T2-0by" id="pfp-gd-fIS"/>
+                        <outlet property="timeLbl" destination="8eL-ot-1EI" id="NeT-4D-EK0"/>
+                        <outlet property="windLbl" destination="wnb-Jk-9IK" id="X3e-u5-ufR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -496,6 +540,7 @@
         <image name="11n" width="395" height="381"/>
         <image name="13d" width="396" height="379"/>
         <image name="13n" width="389" height="377"/>
+        <image name="Screen Shot 2016-08-15 at 11.15.02 PM" width="352" height="335"/>
         <image name="location" width="266" height="358"/>
         <image name="termometer" width="181" height="202"/>
         <image name="umbrella" width="309" height="373"/>
