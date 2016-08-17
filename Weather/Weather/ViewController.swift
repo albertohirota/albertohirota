@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate  {
-
+    
     @IBOutlet weak var cityLbl: UILabel!
     @IBOutlet weak var mainImg: UIImageView!
     @IBOutlet weak var temperatureLbl: UILabel!
@@ -41,50 +41,114 @@ class ViewController: UIViewController, CLLocationManagerDelegate  {
     @IBOutlet weak var tempMax5: UILabel!
     @IBOutlet weak var tempMin5: UILabel!
     
+    var weather = Weather()
+    //var weather: Weather! = Weather()
+    //var weather: Weather!
     var locationManager = CLLocationManager()
     var latitude: String?
     var longitude: String?
-    var weather: Weather!
-    typealias LocationComplete = () -> ()
+    var actualTime: String?
+    var weekToday: String?
+    var week1: String?
+    var week2: String?
+    var week3: String?
+    var week4: String?
+    var week5: String?
+    var weekName = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+    
+    
+    
+    typealias UpdateDownloads = () -> ()
+    //typealias screenUpdate = () -> ()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        locateMe() { () -> () in }
-
-        
+        timeNow()
+        locateMe()
+        weekDay()
+        print("DID we get here? - did view load")
         
     }
-    
-    func locateMe(completed: LocationComplete) {
+    func locateMe() {
         if CLLocationManager.locationServicesEnabled() {
+            locationManager.requestWhenInUseAuthorization()
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.requestWhenInUseAuthorization()
-           // locationManager.requestAlwaysAuthorization()
+            locationManager.requestAlwaysAuthorization()
             locationManager.startUpdatingLocation()
-            locationManager.stopUpdatingLocation()
+        } else {
+            print("location services are not enabled")
         }
     }
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let coordinations: CLLocationCoordinate2D = (manager.location?.coordinate)!
+        locationManager.stopUpdatingLocation()
+        let coordinations:CLLocationCoordinate2D = (manager.location?.coordinate)!
         let long = coordinations.longitude
         let lat = coordinations.latitude
         latitude = "\(lat)"
         longitude = "\(long)"
         print(long)
         print(lat)
+        
+        updates { () -> () in }
+        print("DID we get here? - updates")
+        //updateUI { () -> () in }
+       // print("DID we get here? - screen updates")
+    }
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        locationManager.stopUpdatingLocation()
     }
     @IBAction func updatePressed(sender: AnyObject) {
-        locateMe(){ () -> () in }
-
-        Weather().downloadWeather(latitude!, longit: longitude!)
-        Weather().downloadForecast(latitude!, longit: longitude!)
+        //locateMe(){ () -> () in }
+        //print(weather.city)
+        print(cityLbl.text)
+        updateUI()
         
     }
     func updateUI() {
-        cityLbl.text = weather.city 
+        cityLbl.text = weather.city
+        mainImg.image = UIImage(named: "\(weather.weatherCond)")
+        temperatureLbl.text = weather.temperature
+        timeLbl.text = actualTime
+        dayOfWeekLbl.text = weekToday
+        tempMaxLbl.text = weather.tempMax
+        tempMinLbl.text = weather.tempMin
+        windLbl.text = weather.wind
+        humidityLbl.text = weather.humidity
+        dayOfWeek1Lbl.text = week1
+        condImg1.image = UIImage(named: "\(weather.condNextDay1)")
+        tempMax1.text = weather.tempMax1
+        tempMin1.text = weather.tempMin1
+        dayOfWeek2.text = week2
+        condImg2.image = UIImage(named: "\(weather.condNextDay2)")
+        tempMax2.text = weather.tempMax2
+        tempMin2.text = weather.tempMin2
+        dayOfWeek3.text = week3
+        condImg3.image = UIImage(named: "\(weather.condNextDay3)")
+        tempMax3.text = weather.tempMax3
+        tempMin3.text = weather.tempMin3
+        dayOfWeek4.text = week4
+        condImg4.image = UIImage(named: "\(weather.condNextDay4)")
+        tempMax4.text = weather.tempMax4
+        tempMin4.text = weather.tempMin4
+        dayOfWeek5.text = week5
+        condImg5.image = UIImage(named: "\(weather.condNextDay5)")
+        tempMax5.text = weather.tempMax5
+        tempMin5.text = weather.tempMin5
     }
-    
+    func updates(completed: UpdateDownloads) {
+        Weather().downloadWeather(latitude!, longit: longitude!)
+        Weather().downloadForecast(latitude!, longit: longitude!)
+    }
+    func timeNow() {
+        let hours = NSCalendar.currentCalendar().component(.Hour, fromDate: NSDate())
+        let minutes = NSCalendar.currentCalendar().component(.Minute, fromDate: NSDate())
+        actualTime = "\(hours):\(minutes)"
+        print(actualTime)
+    }
+    func weekDay() {
+        let weekD = NSCalendar.currentCalendar().component(.Weekday, fromDate: NSDate())
+        print(weekD)
+    }
 }
 
