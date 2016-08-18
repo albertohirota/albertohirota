@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		707CC5961D6549DB00CACB09 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 707CC5951D6549DB00CACB09 /* GoogleService-Info.plist */; };
 		70F546841D64E5B900CAF48C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F546831D64E5B900CAF48C /* AppDelegate.swift */; };
 		70F546861D64E5B900CAF48C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F546851D64E5B900CAF48C /* ViewController.swift */; };
 		70F546891D64E5B900CAF48C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70F546871D64E5B900CAF48C /* Main.storyboard */; };
@@ -23,11 +24,13 @@
 		70F546AE1D65041C00CAF48C /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F546AB1D65041C00CAF48C /* Bolts.framework */; };
 		70F546AF1D65041C00CAF48C /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F546AC1D65041C00CAF48C /* FBSDKCoreKit.framework */; };
 		70F546B01D65041C00CAF48C /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F546AD1D65041C00CAF48C /* FBSDKLoginKit.framework */; };
+		70F546B31D651FF100CAF48C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F546B21D651FF100CAF48C /* DataService.swift */; };
 		9568593EC010413633A3A025 /* Pods_Showcase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE53E733583D993FD15B143 /* Pods_Showcase.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		68AE2799F990B207543670BD /* Pods-Showcase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Showcase.release.xcconfig"; path = "Pods/Target Support Files/Pods-Showcase/Pods-Showcase.release.xcconfig"; sourceTree = "<group>"; };
+		707CC5951D6549DB00CACB09 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		70F546801D64E5B900CAF48C /* Showcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Showcase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70F546831D64E5B900CAF48C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70F546851D64E5B900CAF48C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +49,7 @@
 		70F546AB1D65041C00CAF48C /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		70F546AC1D65041C00CAF48C /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		70F546AD1D65041C00CAF48C /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		70F546B21D651FF100CAF48C /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		B4A667DD425B48FC804000CC /* Pods-Showcase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Showcase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Showcase/Pods-Showcase.debug.xcconfig"; sourceTree = "<group>"; };
 		FEE53E733583D993FD15B143 /* Pods_Showcase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Showcase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -95,6 +99,7 @@
 		70F546821D64E5B900CAF48C /* Showcase */ = {
 			isa = PBXGroup;
 			children = (
+				70F546B11D651FD800CAF48C /* Services */,
 				70F546AA1D65040700CAF48C /* Frameworks */,
 				70F546A31D64EBA100CAF48C /* Util */,
 				70F546981D64E5E200CAF48C /* Resources */,
@@ -106,6 +111,7 @@
 				70F546871D64E5B900CAF48C /* Main.storyboard */,
 				70F5468C1D64E5B900CAF48C /* LaunchScreen.storyboard */,
 				70F5468A1D64E5B900CAF48C /* Assets.xcassets */,
+				707CC5951D6549DB00CACB09 /* GoogleService-Info.plist */,
 				70F5468F1D64E5B900CAF48C /* Info.plist */,
 			);
 			path = Showcase;
@@ -162,6 +168,14 @@
 				70F546AD1D65041C00CAF48C /* FBSDKLoginKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		70F546B11D651FD800CAF48C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				70F546B21D651FF100CAF48C /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		7E1AAD102F6CC75F9A8488C9 /* Frameworks */ = {
@@ -234,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70F5469D1D64E5FD00CAF48C /* NotoSans-Bold.ttf in Resources */,
+				707CC5961D6549DB00CACB09 /* GoogleService-Info.plist in Resources */,
 				70F5468E1D64E5B900CAF48C /* LaunchScreen.storyboard in Resources */,
 				70F5469E1D64E5FD00CAF48C /* NotoSans-BoldItalic.ttf in Resources */,
 				70F5469F1D64E5FD00CAF48C /* NotoSans-Italic.ttf in Resources */,
@@ -299,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70F546A91D64FCE100CAF48C /* MaterialTextField.swift in Sources */,
+				70F546B31D651FF100CAF48C /* DataService.swift in Sources */,
 				70F546A21D64EA9A00CAF48C /* MaterialView.swift in Sources */,
 				70F546861D64E5B900CAF48C /* ViewController.swift in Sources */,
 				70F546841D64E5B900CAF48C /* AppDelegate.swift in Sources */,

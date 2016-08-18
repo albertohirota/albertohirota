@@ -9,6 +9,7 @@
 import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
+import Firebase
 
 
 @UIApplicationMain
@@ -19,8 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        FIRApp.configure()
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-    } //this command, it is passing information to facebook, and check if they have anything for us.
+  //      FIRApp.configure()
+    } //this command, it is passing information to facebook, and check if they have anything for us.//OPEN URL
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -52,6 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
     }
 
+//  HERE ARE SOME OBJECTIVE-C CODE, BUT IT IS BASICLY SAME AS SWIFT, JUST READ AND IMPLEMENT
 //    - (void)applicationDidBecomeActive:(UIApplication *)application {
 //    [FBSDKAppEvents activateApp];
 //    }
