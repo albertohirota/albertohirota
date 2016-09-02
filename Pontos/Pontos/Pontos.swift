@@ -190,11 +190,6 @@ struct Pontos {
                 print("Could not serialize")
             }
         }
-
-        
-       
-        
-        //return[dictPonto[0]]
         return dictPonto
     }
 }
