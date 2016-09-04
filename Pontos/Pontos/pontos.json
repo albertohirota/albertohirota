@@ -5,31 +5,37 @@
             "ID": "1",
             "Tipo": "Abertura",
             "Locked": "1",
+            "Titulo": "Abertura",
             "_x0031_": "No abrir da nossa Umbanda",
             "_x0032_": "Eu quero é corimar",
             "_x0033_": "Oxalá me dá licena",
             "_x0034_": "Eu quero é corimar",
             "_x0035_": "E no abrir da nossa Umbanda",
-            "_x0036_": "Eu quero é corimar"
+            "_x0036_": "Eu quero é corimar",
+            "KeyWord": "abertura oxala oxalá"
          },
          {
             "ID": "2",
             "Tipo": "Abertura",
             "Locked": "0",
+            "Titulo": "Abertura",
             "_x0031_": "Eu abro esta gira com Deus",
             "_x0032_": "Eu abro esta gira com Deus",
             "_x0033_": "Eu abro esta gira com Deus",
             "_x0034_": "Com Deus eu abro",
-            "_x0035_": "Eu abro esta gira com Deus"
+            "_x0035_": "Eu abro esta gira com Deus",
+            "KeyWord": "abertura deus gira"
          },
          {
             "ID": "3",
             "Tipo": "Abertura",
             "Locked": "1",
+            "Titulo": "Abertura",
             "_x0031_": "Abrimos a nossa Gira",
             "_x0032_": "Pedimos de coração",
             "_x0033_": "E ao nosso Pai Oxalá",
-            "_x0034_": "Para cumprir nossa missão"
+            "_x0034_": "Para cumprir nossa missão",
+            "KeyWord": "abertura oxalá oxala, missao"
          },
          {
             "ID": "4",
@@ -40,7 +46,8 @@
             "_x0033_": "Banda eu como gira",
             "_x0034_": "Como gira dentro de um Congá",
             "_x0035_": "Gira para todas as giras",
-            "_x0036_": "Gira estes filhos de Fé"
+            "_x0036_": "Gira estes filhos de Fé",
+            "KeyWord": "abertura gira conga congá banda"
          },
          {
             "ID": "5",
@@ -50,7 +57,8 @@
             "_x0032_": "Ele mandou iluminar",
             "_x0033_": "Mandou iluminar",
             "_x0034_": "Os seus filhos",
-            "_x0035_": "E iluminou este Congá"
+            "_x0035_": "E iluminou este Congá",
+            "KeyWord": "oxala oxalá iliminar filhos"
          },
          {
             "ID": "6",
@@ -63,7 +71,8 @@
             "_x0035_": "Quem rola a pedra na pedreira",
             "_x0036_": "É meu Pai Xangô.",
             "_x0037_": "Kaô, kaô meu Pai,",
-            "_x0038_": "Kaô Xangô das suas 7 Montanhas."
+            "_x0038_": "Kaô Xangô das suas 7 Montanhas.",
+            "KeyWord": "xango pedreira pedra 7 montanhas kao kaô"
          },
          {
             "ID": "7",
@@ -76,7 +85,8 @@
             "_x0035_": "Atotô Obaluaê",
             "_x0036_": "Atotô babá",
             "_x0037_": "Atotô Obaluaê",
-            "_x0038_": "Atotô é orixá"
+            "_x0038_": "Atotô é orixá",
+            "KeyWord": "omulu obaluae obaluaie atoto orixa oxala"
          },
          {
             "ID": "8",
@@ -86,7 +96,8 @@
             "_x0032_": "É a dona da cachoeira",
             "_x0033_": "Mamãe Oxum é dona deste Congá",
             "_x0034_": "Vem salvar os filhos teus",
-            "_x0035_": "Vem teus filhos saravá"
+            "_x0035_": "Vem teus filhos saravá",
+            "KeyWord": "oxum mamae conga"
          },
          {
             "ID": "9",
@@ -95,7 +106,8 @@
             "_x0031_": "Oxossi é bambi",
             "_x0032_": "Ele é caçador",
             "_x0033_": "Oxossi é bambi ô clime",
-            "_x0034_": "É rei Matalambô"
+            "_x0034_": "É rei Matalambô",
+            "KeyWord": "oxossi matalambo matalambô"
          },
          {
             "ID": "10",
@@ -106,7 +118,8 @@
             "_x0033_": "Ogum está de ronda,",
             "_x0034_": "Meu Pai vai rondar",
             "_x0035_": "Veio abenoar os filhos",
-            "_x0036_": "De Aruanda e saravá"
+            "_x0036_": "De Aruanda e saravá",
+            "KeyWord": "ogum aruanda sarava"
          },
          {
             "ID": "11",
@@ -117,7 +130,8 @@
             "_x0033_": "Deu um relâmpago no céu",
             "_x0034_": "O céu clareou",
             "_x0035_": "Me ajoelhei",
-            "_x0036_": "E Iansã me abenoou"
+            "_x0036_": "E Iansã me abenoou",
+            "KeyWord": "iansa iansã ceu"
          },
          {
             "ID": "12",
@@ -128,7 +142,8 @@
             "_x0033_": "Salve conchinha de prata,",
             "_x0034_": "Salve estrela do mar,",
             "_x0035_": "Salve a Mãe Sereia,",
-            "_x0036_": "Rainha Iemanjá"
+            "_x0036_": "Rainha Iemanjá",
+            "KeyWord": "sereia iemanja iemanjá estrela mar rainha"
          },
          {
             "ID": "13",
@@ -137,7 +152,8 @@
             "_x0031_": "Morou na porta do cemitério",
             "_x0032_": "Sou companheiro de Exu Porteira,",
             "_x0033_": "Trabalho á no Cruzeiro,",
-            "_x0034_": "Eu sou Exu João Caveira."
+            "_x0034_": "Eu sou Exu João Caveira.",
+            "KeyWord": "exu porteira cruzeiro joao caveira joão caveira"
          },
          {
             "ID": "14",
@@ -148,7 +164,8 @@
             "_x0033_": "Bebo, fumo e danço",
             "_x0034_": "Para subsistir,",
             "_x0035_": "Assim cumpro o meu destino",
-            "_x0036_": "Que é só me divertir."
+            "_x0036_": "Que é só me divertir.",
+            "KeyWord": "pomba gira"
          },
          {
             "ID": "15",
@@ -157,7 +174,8 @@
             "_x0031_": "Ele vem daquelas matas",
             "_x0032_": "Do reino da Juremá",
             "_x0033_": "Caboclo vem de Aruanda",
-            "_x0034_": "Vamos todos saravá"
+            "_x0034_": "Vamos todos saravá",
+            "KeyWord": "caboclos jurema sarava matas"
          },
          {
             "ID": "16",
@@ -166,17 +184,19 @@
             "_x0031_": "Preto Velho trabalhou",
             "_x0032_": "Toda vida trabalhou",
             "_x0033_": "Mas um dia á na Aruanda",
-            "_x0034_": "Oxalá o abenoou."
+            "_x0034_": "Oxalá o abenoou.",
+            "KeyWord": "preto velho oxala"
          },
          {
             "ID": "17",
             "Tipo": "Pai e Vovó",
             "Locked": "1",
             "Titulo": "Pai Antônio",
-            "_x0031_": "No terreirode Pai Antônio",
+            "_x0031_": "No terreiro de Pai Antônio",
             "_x0032_": "Eu vou girar, eu vou girar,",
             "_x0033_": "Quem chamar por Pai Antônio",
-            "_x0034_": "Ele vem saravá, ele vem ajudar."
+            "_x0034_": "Ele vem saravá, ele vem ajudar.",
+            "KeyWord": "pai antonio pai antônio"
          },
          {
             "ID": "18",
@@ -186,7 +206,8 @@
             "_x0032_": "Galo cantou, eu vi coral piar",
             "_x0033_": "Segura a pemba",
             "_x0034_": "Passa a mão na ferramenta",
-            "_x0035_": "Pra chamar povo da Umbanda"
+            "_x0035_": "Pra chamar povo da Umbanda",
+            "KeyWord": "tia maria coral"
          },
          {
             "ID": "19",
@@ -198,7 +219,8 @@
             "_x0034_": "Foi Santa Bárbara quem mandou.",
             "_x0035_": "Dois, dois, Sereia do Mar!",
             "_x0036_": "Dois, dois, Mamãe Iemanjá!",
-            "_x0037_": "Dois, dois meu pai Oxalá."
+            "_x0037_": "Dois, dois meu pai Oxalá.",
+            "KeyWord": "criancas crianças cosme damiao santa barbara iemanja"
          },
          {
             "ID": "20",
@@ -208,7 +230,8 @@
             "_x0031_": "Ai meu Senhor do Bonfim",
             "_x0032_": "Valei-me São Salvador",
             "_x0033_": "Vamos saravá minha gente",
-            "_x0034_": "Povo da Bahia chegou."
+            "_x0034_": "Povo da Bahia chegou.",
+            "KeyWord": "bahia senhor do bonfim são salvador sarava povo"
          },
          {
             "ID": "21",
@@ -219,7 +242,8 @@
             "_x0032_": "Ele anda no mundo",
             "_x0033_": "Risca no Terreiro",
             "_x0034_": "Ele anda no mundo",
-            "_x0035_": "Risca no Terreiro"
+            "_x0035_": "Risca no Terreiro",
+            "KeyWord": "mestre acuja acujá risca"
          },
          {
             "ID": "22",
@@ -251,10 +275,13 @@
             "_x0032_2": "Vinte e dois",
             "_x0032_3": "Vinte e Tres",
             "_x0032_4": "Vinte e Quatro",
-            "_x0032_5": "Vinte e Cinco"
+            "_x0032_5": "Vinte e Cinco",
+            "KeyWord": "um dois tres três quatro cinco ceu"
          }
       ],
       "_xmlns:od": "urn:schemas-microsoft-com:officedata",
-      "_generated": "2016-08-31T14:49:22"
+      "_xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+      "_xsi:noNamespaceSchemaLocation": "Ponto.xsd",
+      "_generated": "2016-09-04T11:03:28"
    }
 }

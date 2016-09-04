@@ -10,6 +10,7 @@ import UIKit
 
 class PontoCell: UITableViewCell {
 
+    @IBOutlet weak var pontoTipoLbl: UILabel!
     @IBOutlet weak var pontoLabel: UILabel!
     @IBOutlet weak var lockedImg: UIImageView!
     var numb: CGFloat = 0
@@ -30,7 +31,7 @@ class PontoCell: UITableViewCell {
         pontoLabel.text = pontos.titulo
         lock(pontos.locked)
         
-        _ = pontos.tipo
+        pontoTipoLbl.text = pontos.tipo
        
     }
     func lock(locked: String) {

@@ -13,9 +13,9 @@
 		701608DC1D750DF800B244F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 701608DA1D750DF800B244F3 /* LaunchScreen.storyboard */; };
 		701608E61D76817600B244F3 /* Pontos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701608E51D76817600B244F3 /* Pontos.swift */; };
 		701608F41D770C7E00B244F3 /* PontosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701608F31D770C7E00B244F3 /* PontosVC.swift */; };
-		705DE69F1D7766D1007355AE /* pontos.json in Resources */ = {isa = PBXBuildFile; fileRef = 705DE69E1D7766D1007355AE /* pontos.json */; };
 		705DE6A31D792F4A007355AE /* PontoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705DE6A21D792F4A007355AE /* PontoCell.swift */; };
 		70F7F2E01D79C47500C71C11 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F7F2DF1D79C47500C71C11 /* Extension.swift */; };
+		70F7F2E21D7C6FB500C71C11 /* pontos.json in Resources */ = {isa = PBXBuildFile; fileRef = 70F7F2E11D7C6FB500C71C11 /* pontos.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +27,9 @@
 		701608DD1D750DF800B244F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		701608E51D76817600B244F3 /* Pontos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pontos.swift; sourceTree = "<group>"; };
 		701608F31D770C7E00B244F3 /* PontosVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PontosVC.swift; sourceTree = "<group>"; };
-		705DE69E1D7766D1007355AE /* pontos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pontos.json; sourceTree = "<group>"; };
 		705DE6A21D792F4A007355AE /* PontoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PontoCell.swift; sourceTree = "<group>"; };
 		70F7F2DF1D79C47500C71C11 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		70F7F2E11D7C6FB500C71C11 /* pontos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pontos.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,7 @@
 		701608EE1D77071500B244F3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				705DE69E1D7766D1007355AE /* pontos.json */,
+				70F7F2E11D7C6FB500C71C11 /* pontos.json */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -168,8 +168,8 @@
 			files = (
 				701608DC1D750DF800B244F3 /* LaunchScreen.storyboard in Resources */,
 				701608D91D750DF800B244F3 /* Assets.xcassets in Resources */,
+				70F7F2E21D7C6FB500C71C11 /* pontos.json in Resources */,
 				701608D71D750DF800B244F3 /* Main.storyboard in Resources */,
-				705DE69F1D7766D1007355AE /* pontos.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

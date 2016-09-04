@@ -8,18 +8,21 @@
 
 import UIKit
 
-class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UISearchBarDelegate {
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var pontosPicker: UIPickerView!
     @IBOutlet weak var tableView: UITableView!
     var pontos = Pontos.createPontos()
     var selectTipo: [String] = [String]()
     var inPickerMode = false
+    var inSearchMode = false
     static var locked = true
     var selectTipo1: [String] = [String]()
     var pickerSelected: String?
     var filteredPicker = Pontos.createPontos()
-    
+    var filteredSearcher = Pontos.createPontos()
+    var filteredAndSearchPicker = Pontos.createPontos()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +31,7 @@ class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         self.tableView.delegate = self
         self.pontosPicker.delegate = self
         self.pontosPicker.dataSource = self
+        self.searchBar.delegate = self
         selectType()
         
         
@@ -44,15 +48,27 @@ class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if inPickerMode {
+        if inPickerMode && inSearchMode {
+            return self.filteredAndSearchPicker.count
+        } else if inPickerMode {
             return self.filteredPicker.count
+        } else if inSearchMode {
+            return self.filteredSearcher.count
         } else {
             return self.pontos.count
         }
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCellWithIdentifier("PontoCell", forIndexPath: indexPath) as? PontoCell {
-            if inPickerMode {
+            if inPickerMode && inSearchMode {
+                let ponto = self.filteredAndSearchPicker[indexPath.row]
+                cell.configureCell(ponto)
+                return cell
+            } else if inSearchMode {
+                let ponto = self.filteredSearcher[indexPath.row]
+                cell.configureCell(ponto)
+                return cell
+            } else if inPickerMode {
                 let ponto = self.filteredPicker[indexPath.row]
                 cell.configureCell(ponto)
                 return cell
@@ -72,6 +88,16 @@ class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
     }
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         pickerSelected = selectTipo[row]
+        if inSearchMode {
+            if pickerSelected == "Todos" {
+                inPickerMode = false
+                tableView.reloadData()
+            } else {
+                inPickerMode = true
+                filteredAndSearchPicker = filteredSearcher.filter({$0.tipo == pickerSelected})
+                tableView.reloadData()
+            }
+        } else {
         if pickerSelected == "Todos" {
             inPickerMode = false
             tableView.reloadData()
@@ -80,6 +106,35 @@ class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
             filteredPicker = pontos.filter({$0.tipo == pickerSelected})
             tableView.reloadData()
         }
+        }
+    }
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        if inPickerMode {
+            if searchBar.text == nil || searchBar.text == "" {
+                inSearchMode = false
+                view.endEditing(true)
+                tableView.reloadData()
+            } else {
+                inSearchMode = true
+                let lower = searchBar.text!.lowercaseString
+                filteredAndSearchPicker = filteredPicker.filter({$0.keyWord.rangeOfString(lower) != nil})
+                tableView.reloadData()
+            }
+        } else {
+        if searchBar.text == nil || searchBar.text == "" {
+            inSearchMode = false
+            view.endEditing(true)
+            tableView.reloadData()
+        } else {
+            inSearchMode = true
+            let lower = searchBar.text!.lowercaseString
+            filteredSearcher = pontos.filter({$0.keyWord.rangeOfString(lower) != nil})
+            tableView.reloadData()
+        }
+        }
+    }
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        view.endEditing(true)
     }
     func selectType() {
         if let path = NSBundle.mainBundle().pathForResource("pontos", ofType: "json") {
