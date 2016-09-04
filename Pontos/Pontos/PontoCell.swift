@@ -11,6 +11,9 @@ import UIKit
 class PontoCell: UITableViewCell {
 
     @IBOutlet weak var pontoLabel: UILabel!
+    @IBOutlet weak var lockedImg: UIImageView!
+    var numb: CGFloat = 0
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,23 +25,21 @@ class PontoCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
-    //var webView: WKWebView!
-    //@IBOutlet weak var movieImg: UIImageView!
-    //@IBOutlet weak var movieTitle: UILabel!
-    //@IBOutlet weak var movieDescription: UILabel!
-    //@IBOutlet weak var movieUrl: UILabel!
-    //override func awakeFromNib() {
-    //    super.awakeFromNib()
-        // Initialization code
-    //}
     
     func configureCell(pontos: Pontos) {
         pontoLabel.text = pontos.titulo
+        lock(pontos.locked)
+        
+        _ = pontos.tipo
+       
+    }
+    func lock(locked: String) {
+        if let n = NSNumberFormatter().numberFromString(locked) {
+            numb = CGFloat(n)
+            lockedImg.alpha = numb
+        }
         
     }
-
-    
 }
 
 

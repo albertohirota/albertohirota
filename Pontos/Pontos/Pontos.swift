@@ -53,6 +53,7 @@ struct Pontos {
                     if let dictPont = jsonResult as? Dictionary<String, AnyObject> {
                         if let dataroot = dictPont["dataroot"] {
                             if let listP = dataroot["Ponto"] as? [Dictionary<String, AnyObject>] {
+                                let pCount = listP.count
                                 var index = 0
                                 var id = " "
                                 var tipo = " "
@@ -85,7 +86,7 @@ struct Pontos {
                                 var linha24 = " "
                                 var linha25 = " "
                                 
-                                while index != 22 {
+                                while index != pCount {
                                     if let id1 = listP[index]["ID"] as? String {
                                         id = id1
                                     }
@@ -178,9 +179,37 @@ struct Pontos {
                                     }
                                     
                                     let dictP = Pontos(id: id, tipo: tipo, locked: locked, titulo: titulo, autor: autor, linha1: linha1, linha2: linha2, linha3: linha3, linha4: linha4, linha5: linha5, linha6: linha6, linha7: linha7, linha8: linha8, linha9: linha9, linha10: linha10, linha11: linha11, linha12: linha12, linha13: linha13, linha14: linha14, linha15: linha15, linha16: linha16, linha17: linha17, linha18: linha18, linha19: linha19, linha20: linha20, linha21: linha21, linha22: linha22, linha23: linha23, linha24: linha24, linha25: linha25)
-                                    dictPonto.append(dictP)
+                                   
+                                        dictPonto.append(dictP)
                                     
                                     index = index + 1
+                                    titulo = " "
+                                    autor = " "
+                                    linha1 = " "
+                                    linha2 = " "
+                                    linha3 = " "
+                                    linha4 = " "
+                                    linha5 = " "
+                                    linha6 = " "
+                                    linha7 = " "
+                                    linha8 = " "
+                                    linha9 = " "
+                                    linha10 = " "
+                                    linha11 = " "
+                                    linha12 = " "
+                                    linha13 = " "
+                                    linha14 = " "
+                                    linha15 = " "
+                                    linha16 = " "
+                                    linha17 = " "
+                                    linha18 = " "
+                                    linha19 = " "
+                                    linha20 = " "
+                                    linha21 = " "
+                                    linha22 = " "
+                                    linha23 = " "
+                                    linha24 = " "
+                                    linha25 = " "
                                 }
                             }
                         }

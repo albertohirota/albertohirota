@@ -58,8 +58,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKN-Uc-z6V">
-                                                    <rect key="frame" x="18" y="18" width="564" height="30"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="Ln7-Tl-MeL">
+                                                    <rect key="frame" x="552" y="8" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="EhM-cS-BvL"/>
+                                                        <constraint firstAttribute="height" constant="40" id="adv-Lg-vqq"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKN-Uc-z6V">
+                                                    <rect key="frame" x="18" y="15" width="526" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="h6D-63-oef"/>
                                                     </constraints>
@@ -69,12 +76,30 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="DKN-Uc-z6V" secondAttribute="bottom" constant="7" id="DCy-fb-Jqg"/>
+                                                <constraint firstItem="DKN-Uc-z6V" firstAttribute="top" secondItem="h5D-Gw-SnY" secondAttribute="topMargin" constant="7" id="GXb-ef-582"/>
+                                                <constraint firstItem="Ln7-Tl-MeL" firstAttribute="leading" secondItem="DKN-Uc-z6V" secondAttribute="trailing" id="Wzc-fj-Rba"/>
+                                                <constraint firstItem="Ln7-Tl-MeL" firstAttribute="top" secondItem="h5D-Gw-SnY" secondAttribute="topMargin" id="XGS-Au-F7m"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="DKN-Uc-z6V" secondAttribute="trailing" constant="10" id="l8E-f6-fvH"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ln7-Tl-MeL" secondAttribute="bottom" constant="8" id="mI7-2K-ui0"/>
+                                                <constraint firstItem="Ln7-Tl-MeL" firstAttribute="leading" secondItem="DKN-Uc-z6V" secondAttribute="trailing" constant="8" id="mx7-Fb-tad"/>
+                                                <constraint firstItem="Ln7-Tl-MeL" firstAttribute="top" secondItem="h5D-Gw-SnY" secondAttribute="top" id="qZk-cj-mpA"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ln7-Tl-MeL" secondAttribute="trailing" constant="8" id="r90-0L-8Re"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Ln7-Tl-MeL" secondAttribute="bottom" constant="4" id="xfj-5x-wM4"/>
                                                 <constraint firstItem="DKN-Uc-z6V" firstAttribute="leading" secondItem="h5D-Gw-SnY" secondAttribute="leadingMargin" constant="10" id="xoS-LK-rzJ"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="l8E-f6-fvH"/>
+                                                    <exclude reference="Wzc-fj-Rba"/>
+                                                    <exclude reference="mI7-2K-ui0"/>
+                                                    <exclude reference="qZk-cj-mpA"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
+                                            <outlet property="lockedImg" destination="Ln7-Tl-MeL" id="oc1-6t-FQC"/>
                                             <outlet property="pontoLabel" destination="DKN-Uc-z6V" id="qSS-lf-5k7"/>
                                         </connections>
                                     </tableViewCell>
@@ -89,7 +114,7 @@
                                             <constraint firstAttribute="height" constant="80" id="IMB-fE-dKp"/>
                                         </constraints>
                                     </pickerView>
-                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="dLW-Ye-nVL">
+                                    <searchBar contentMode="redraw" placeholder="Digite o nome para busca" translatesAutoresizingMaskIntoConstraints="NO" id="dLW-Ye-nVL">
                                         <rect key="frame" x="0.0" y="80" width="600" height="44"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </searchBar>
@@ -206,4 +231,7 @@
             <point key="canvasLocation" x="1148" y="392"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="lock" width="332" height="365"/>
+    </resources>
 </document>
