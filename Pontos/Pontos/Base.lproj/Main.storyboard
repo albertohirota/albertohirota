@@ -59,6 +59,10 @@
                                     <searchBar contentMode="redraw" placeholder="Digite o nome para busca" translatesAutoresizingMaskIntoConstraints="NO" id="dLW-Ye-nVL">
                                         <rect key="frame" x="0.0" y="80" width="600" height="44"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <scopeButtonTitles>
+                                            <string>Title</string>
+                                            <string>Title</string>
+                                        </scopeButtonTitles>
                                     </searchBar>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -76,7 +80,7 @@
                                 <rect key="frame" x="0.0" y="188" width="600" height="412"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="PontoCell" rowHeight="60" id="Hbl-Ol-JSo" customClass="PontoCell" customModule="Pontos" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PontoCell" rowHeight="60" id="Hbl-Ol-JSo" customClass="PontoCell" customModule="Pontos" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hbl-Ol-JSo" id="h5D-Gw-SnY">
@@ -581,6 +585,7 @@
                                 </variation>
                             </scrollView>
                         </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="aR7-xH-Xjd" firstAttribute="top" secondItem="9OH-jR-Rlw" secondAttribute="top" constant="75" id="HG6-6S-oht"/>
                             <constraint firstItem="fja-u4-P0G" firstAttribute="top" secondItem="aR7-xH-Xjd" secondAttribute="bottom" constant="1" id="iiG-tI-CBR"/>
@@ -588,6 +593,35 @@
                             <constraint firstAttribute="trailing" secondItem="aR7-xH-Xjd" secondAttribute="trailing" constant="1" id="lcd-TZ-dxH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="autorLbl" destination="T6o-hO-S8B" id="Ud3-Ov-LNu"/>
+                        <outlet property="eightLbl" destination="ObV-cy-DVI" id="89t-vd-DBG"/>
+                        <outlet property="eightteenLbl" destination="73w-9s-bPz" id="NGA-hs-yQ8"/>
+                        <outlet property="elevenLbl" destination="TF6-nM-3xX" id="kaz-Ir-PQl"/>
+                        <outlet property="fifteenLbl" destination="C6d-f9-6Ij" id="WGM-v0-mGx"/>
+                        <outlet property="fiveLbl" destination="RAl-YP-m4C" id="hOj-kF-A6b"/>
+                        <outlet property="fourLbl" destination="d6y-xg-QFP" id="Nih-6p-ch1"/>
+                        <outlet property="fourteenLbl" destination="vjc-y1-Hm3" id="5Kp-ed-zgY"/>
+                        <outlet property="nineLbl" destination="yux-eg-bo7" id="XGK-Yx-QnB"/>
+                        <outlet property="nineteenLbl" destination="wG6-GS-lER" id="KhP-sV-tXh"/>
+                        <outlet property="oneLbl" destination="2WD-7k-7Sd" id="s31-QC-mR6"/>
+                        <outlet property="sevenLbl" destination="nol-H9-GGO" id="fbo-do-6D5"/>
+                        <outlet property="seventeenLbl" destination="6W2-k8-WJw" id="9Ct-IR-ZBy"/>
+                        <outlet property="sixLbl" destination="VjC-HF-SQO" id="SX9-kP-6Qo"/>
+                        <outlet property="sixteenLbl" destination="ebf-db-WOy" id="LSQ-jU-IbQ"/>
+                        <outlet property="tenLbl" destination="d1o-pO-fpP" id="hDs-68-qv8"/>
+                        <outlet property="thirteenLbl" destination="FMR-ob-pVz" id="KMT-rT-Pke"/>
+                        <outlet property="threeLbl" destination="Pg3-QH-weQ" id="5uq-6v-IMQ"/>
+                        <outlet property="tituloLbl" destination="ktP-Tr-Kzt" id="TfA-oW-NET"/>
+                        <outlet property="twelveLbl" destination="235-nn-nPS" id="xHt-09-HDm"/>
+                        <outlet property="twentyLbl" destination="YLw-N2-74c" id="gxO-3m-LiL"/>
+                        <outlet property="twentyfiveLbl" destination="hHK-nc-Zio" id="gw4-yO-qM4"/>
+                        <outlet property="twentyfourLbl" destination="bVp-9p-qy2" id="eAE-Ie-Tp4"/>
+                        <outlet property="twentyoneLbl" destination="3iX-HM-L0h" id="nLz-TP-z8i"/>
+                        <outlet property="twentythreeLbl" destination="OfV-rR-kz7" id="Vx5-jp-GJ1"/>
+                        <outlet property="twentytwoLbl" destination="CZC-fR-t5P" id="Wf0-ip-Po9"/>
+                        <outlet property="twoLbl" destination="KQb-Mm-NN8" id="pLD-Q0-oWs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="00d-V9-2yC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

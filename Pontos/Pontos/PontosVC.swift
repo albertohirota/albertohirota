@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UISearchBarDelegate, UISplitViewControllerDelegate {
+class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UISearchBarDelegate, UISplitViewControllerDelegate, UIAlertViewDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var pontosPicker: UIPickerView!
@@ -17,7 +17,7 @@ class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
     var selectTipo: [String] = [String]()
     var inPickerMode = false
     var inSearchMode = false
-    static var locked = true
+    static var appPaid = false
     var selectTipo1: [String] = [String]()
     var pickerSelected: String?
     var filteredPicker = Pontos.createPontos()
@@ -26,8 +26,10 @@ class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
     var selectedPonto = Pontos()
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        appPaid()
+        self.tableView.allowsSelectionDuringEditing = false
+        //appPaid()
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.pontosPicker.delegate = self
@@ -36,10 +38,13 @@ class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         selectType()
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(PontosVC.dismissKeyboard))
         view.addGestureRecognizer(tap)
+        tap.cancelsTouchesInView = false
         self.splitViewController?.preferredDisplayMode = .AllVisible
         self.splitViewController?.delegate = self
         
     }
+    
+    
     func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool {
         return true
     }
@@ -64,7 +69,7 @@ class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         }
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCellWithIdentifier("PontoCell", forIndexPath: indexPath) as? PontoCell {
+        if let cell = self.tableView!.dequeueReusableCellWithIdentifier("PontoCell", forIndexPath: indexPath) as? PontoCell {
             if inPickerMode && inSearchMode {
                 let ponto = self.filteredAndSearchPicker[indexPath.row]
                 cell.configureCell(ponto)
@@ -87,10 +92,10 @@ class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
             return PontoCell()
         }
     }
-    func appPaid() {
-        PontosVC.locked = true
-        
-    }
+//    func appPaid() {
+//        PontosVC.locked = false
+//        
+//    }
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         pickerSelected = selectTipo[row]
         if inSearchMode {
@@ -188,8 +193,18 @@ class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
             let ponto = self.pontos[indexPath.row]
             self.selectedPonto = ponto
         }
-        
-        performSegueWithIdentifier("DetailPontosVC", sender: nil)
+        if selectedPonto.locked == "1" {
+            let alert = UIAlertController(title: "Ponto Bloqueado", message: "Gostaria de adquirir o aplicativo e ter acesso a todos a mais de 1000 Pontos?", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "SIM", style: .Default, handler: { (action: UIAlertAction!) in
+                print("user clicked YES")
+            }))
+            alert.addAction(UIAlertAction(title: "NÃO", style: .Cancel, handler: { (action: UIAlertAction!) in
+                print("User cancelled")
+            }))
+            self.presentViewController(alert, animated: true, completion: nil)
+        } else {
+            performSegueWithIdentifier("DetailPontosVC", sender: nil)
+        }
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "DetailPontosVC" {

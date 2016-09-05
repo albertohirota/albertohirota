@@ -14,7 +14,6 @@ class PontoCell: UITableViewCell {
     @IBOutlet weak var pontoLabel: UILabel!
     @IBOutlet weak var lockedImg: UIImageView!
     var numb: CGFloat = 0
-
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,11 +34,14 @@ class PontoCell: UITableViewCell {
        
     }
     func lock(locked: String) {
-        if let n = NSNumberFormatter().numberFromString(locked) {
-            numb = CGFloat(n)
-            lockedImg.alpha = numb
+        if !PontosVC.appPaid {
+            if let n = NSNumberFormatter().numberFromString(locked) {
+                numb = CGFloat(n)
+                lockedImg.alpha = numb
+            }
+        } else {
+            lockedImg.alpha = 0
         }
-        
     }
 }
 
