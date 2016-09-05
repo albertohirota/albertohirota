@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UISearchBarDelegate {
+class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UISearchBarDelegate, UISplitViewControllerDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var pontosPicker: UIPickerView!
@@ -23,6 +23,7 @@ class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
     var filteredPicker = Pontos.createPontos()
     var filteredSearcher = Pontos.createPontos()
     var filteredAndSearchPicker = Pontos.createPontos()
+    var selectedPonto = Pontos()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +34,14 @@ class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         self.pontosPicker.dataSource = self
         self.searchBar.delegate = self
         selectType()
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(PontosVC.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        self.splitViewController?.preferredDisplayMode = .AllVisible
+        self.splitViewController?.delegate = self
         
-        
-        
+    }
+    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool {
+        return true
     }
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
@@ -46,7 +52,6 @@ class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return selectTipo[row]
     }
-    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if inPickerMode && inSearchMode {
             return self.filteredAndSearchPicker.count
@@ -166,13 +171,32 @@ class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
             }
         }
     }
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let ponto = self.pontos[indexPath.row]
-        self.performSegueWithIdentifier("MoveDetailPontos", sender: nil)
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        <#code#>
-//    }
-    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if inPickerMode && inSearchMode {
+            let ponto = filteredAndSearchPicker[indexPath.row]
+            self.selectedPonto = ponto
+        } else if inSearchMode {
+            let pontoS = filteredSearcher[indexPath.row]
+            self.selectedPonto = pontoS
+        } else if inPickerMode {
+            let pontoP = filteredPicker[indexPath.row]
+            self.selectedPonto = pontoP
+        } else {
+            let ponto = self.pontos[indexPath.row]
+            self.selectedPonto = ponto
+        }
+        
+        performSegueWithIdentifier("DetailPontosVC", sender: nil)
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "DetailPontosVC" {
+            if let detailPontosVC = segue.destinationViewController as? DetailPontosVC {
+                detailPontosVC.pontos = self.selectedPonto
+            }
+        }
+    }
 }
 

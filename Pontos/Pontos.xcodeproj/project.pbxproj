@@ -16,6 +16,7 @@
 		705DE6A31D792F4A007355AE /* PontoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705DE6A21D792F4A007355AE /* PontoCell.swift */; };
 		70F7F2E01D79C47500C71C11 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F7F2DF1D79C47500C71C11 /* Extension.swift */; };
 		70F7F2E21D7C6FB500C71C11 /* pontos.json in Resources */ = {isa = PBXBuildFile; fileRef = 70F7F2E11D7C6FB500C71C11 /* pontos.json */; };
+		70F7F2E81D7D1A8A00C71C11 /* DetailPontosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F7F2E71D7D1A8A00C71C11 /* DetailPontosVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		705DE6A21D792F4A007355AE /* PontoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PontoCell.swift; sourceTree = "<group>"; };
 		70F7F2DF1D79C47500C71C11 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		70F7F2E11D7C6FB500C71C11 /* pontos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pontos.json; sourceTree = "<group>"; };
+		70F7F2E71D7D1A8A00C71C11 /* DetailPontosVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPontosVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			children = (
 				701608F31D770C7E00B244F3 /* PontosVC.swift */,
 				705DE6A21D792F4A007355AE /* PontoCell.swift */,
+				70F7F2E71D7D1A8A00C71C11 /* DetailPontosVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 				TargetAttributes = {
 					701608CD1D750DF800B244F3 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = A3NV6A7XU8;
 					};
 				};
 			};
@@ -182,6 +186,7 @@
 			files = (
 				70F7F2E01D79C47500C71C11 /* Extension.swift in Sources */,
 				701608E61D76817600B244F3 /* Pontos.swift in Sources */,
+				70F7F2E81D7D1A8A00C71C11 /* DetailPontosVC.swift in Sources */,
 				701608F41D770C7E00B244F3 /* PontosVC.swift in Sources */,
 				705DE6A31D792F4A007355AE /* PontoCell.swift in Sources */,
 				701608D21D750DF800B244F3 /* AppDelegate.swift in Sources */,
@@ -299,10 +304,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Pontos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tests.ts.Pontos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -311,10 +319,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Pontos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tests.ts.Pontos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
