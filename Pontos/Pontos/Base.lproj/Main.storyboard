@@ -171,7 +171,14 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Selecione o Ponto" id="XbC-Mg-OT5"/>
+                    <navigationItem key="navigationItem" title="Selecione o Ponto" id="XbC-Mg-OT5">
+                        <barButtonItem key="backBarButtonItem" title="Selecionar Ponto" id="zsF-F7-M7h"/>
+                        <barButtonItem key="leftBarButtonItem" title="Sobre" id="oqH-aT-6K4">
+                            <connections>
+                                <segue destination="XQP-6P-b17" kind="show" id="Sps-sP-TeV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="pontosPicker" destination="ywa-7C-aNQ" id="ERu-w8-DIN"/>
                         <outlet property="searchBar" destination="dLW-Ye-nVL" id="Tjh-Cr-qj4"/>
@@ -182,6 +189,84 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wk8-Op-Rcc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1148" y="-432"/>
+        </scene>
+        <!--AboutVC-->
+        <scene sceneID="J9U-rF-55m">
+            <objects>
+                <viewController id="XQP-6P-b17" customClass="AboutVC" customModule="Pontos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="awT-Pj-VLz"/>
+                        <viewControllerLayoutGuide type="bottom" id="u0q-cf-Vmc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9bR-j6-3Ak">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Vsi-Y8-bDr">
+                                <rect key="frame" x="35" y="74" width="530" height="516"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TITULO DO APLICATIVO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdX-bS-krD">
+                                        <rect key="frame" x="157" y="0.0" width="217" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="dBV-Oj-wu5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEZ-LL-amx">
+                                        <rect key="frame" x="0.0" y="55" width="530" height="358"/>
+                                        <string key="text">Coletânea de cantos e pontos utilizados na prática dos giras de Umbanda e Candomblé voltados direcionados especificamente a cada entidade e Orixá. Objetivo, simples e prático facilitando a busca por pontos de cada Orixá.</string>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Para sugestōes e comentários envie uma mensagem para: chule@frieira.com.br" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSh-kF-Bsv">
+                                        <rect key="frame" x="5" y="428" width="521" height="38"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pP6-hp-Rya">
+                                        <rect key="frame" x="215" y="481" width="100" height="35"/>
+                                        <color key="backgroundColor" red="0.18039215689999999" green="0.52941176469999995" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="IvV-8z-RHg"/>
+                                            <constraint firstAttribute="height" constant="35" id="zI9-iW-78f"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Restore"/>
+                                        <connections>
+                                            <action selector="restoreBtn:" destination="XQP-6P-b17" eventType="touchUpInside" id="0xJ-PL-n5S"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="u0q-cf-Vmc" firstAttribute="top" secondItem="Vsi-Y8-bDr" secondAttribute="bottom" constant="10" id="FcH-7D-UBI"/>
+                            <constraint firstItem="Vsi-Y8-bDr" firstAttribute="centerY" secondItem="9bR-j6-3Ak" secondAttribute="centerY" id="GJJ-AC-pc9"/>
+                            <constraint firstItem="Vsi-Y8-bDr" firstAttribute="centerX" secondItem="9bR-j6-3Ak" secondAttribute="centerX" id="HQT-Sa-rky"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vsi-Y8-bDr" secondAttribute="trailing" constant="15" id="PYd-9A-zic"/>
+                            <constraint firstItem="u0q-cf-Vmc" firstAttribute="top" secondItem="Vsi-Y8-bDr" secondAttribute="bottom" constant="15" id="Urx-Bh-oOX"/>
+                            <constraint firstItem="Vsi-Y8-bDr" firstAttribute="top" secondItem="awT-Pj-VLz" secondAttribute="bottom" constant="10" id="he5-Ym-Uav"/>
+                            <constraint firstItem="Vsi-Y8-bDr" firstAttribute="leading" secondItem="9bR-j6-3Ak" secondAttribute="leadingMargin" constant="15" id="jVj-LW-g4Q"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="GJJ-AC-pc9"/>
+                                <exclude reference="Urx-Bh-oOX"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="restoreButton" destination="pP6-hp-Rya" id="iSa-ns-Sx2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ace-M4-InE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1876" y="-432"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
