@@ -13,6 +13,10 @@
 		701608DC1D750DF800B244F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 701608DA1D750DF800B244F3 /* LaunchScreen.storyboard */; };
 		701608E61D76817600B244F3 /* Pontos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701608E51D76817600B244F3 /* Pontos.swift */; };
 		701608F41D770C7E00B244F3 /* PontosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701608F31D770C7E00B244F3 /* PontosVC.swift */; };
+		704791381D8784A9003F939C /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 704791371D8784A9003F939C /* libsqlite3.0.tbd */; };
+		704791691D882FD2003F939C /* DataCore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 704791671D882FD2003F939C /* DataCore.xcdatamodeld */; };
+		704791721D886885003F939C /* Favorites+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704791701D886885003F939C /* Favorites+CoreDataProperties.swift */; };
+		704791731D886885003F939C /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704791711D886885003F939C /* Favorites.swift */; };
 		705DE6A31D792F4A007355AE /* PontoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705DE6A21D792F4A007355AE /* PontoCell.swift */; };
 		70DA4FB91D7E3ADA0090CB1B /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DA4FB81D7E3ADA0090CB1B /* AboutVC.swift */; };
 		70F7F2E01D79C47500C71C11 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F7F2DF1D79C47500C71C11 /* Extension.swift */; };
@@ -29,6 +33,11 @@
 		701608DD1D750DF800B244F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		701608E51D76817600B244F3 /* Pontos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pontos.swift; sourceTree = "<group>"; };
 		701608F31D770C7E00B244F3 /* PontosVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PontosVC.swift; sourceTree = "<group>"; };
+		704791371D8784A9003F939C /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		7047913C1D878C24003F939C /* Pontos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pontos-Bridging-Header.h"; sourceTree = "<group>"; };
+		704791681D882FD2003F939C /* DataCore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataCore.xcdatamodel; sourceTree = "<group>"; };
+		704791701D886885003F939C /* Favorites+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Favorites+CoreDataProperties.swift"; path = "../Favorites+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		704791711D886885003F939C /* Favorites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Favorites.swift; path = ../Favorites.swift; sourceTree = "<group>"; };
 		705DE6A21D792F4A007355AE /* PontoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PontoCell.swift; sourceTree = "<group>"; };
 		70DA4FB81D7E3ADA0090CB1B /* AboutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		70F7F2DF1D79C47500C71C11 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -41,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				704791381D8784A9003F939C /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +92,9 @@
 			children = (
 				701608E51D76817600B244F3 /* Pontos.swift */,
 				70F7F2DF1D79C47500C71C11 /* Extension.swift */,
+				7047913C1D878C24003F939C /* Pontos-Bridging-Header.h */,
+				704791701D886885003F939C /* Favorites+CoreDataProperties.swift */,
+				704791711D886885003F939C /* Favorites.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -89,6 +102,7 @@
 		701608EC1D7706FC00B244F3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				704791671D882FD2003F939C /* DataCore.xcdatamodeld */,
 				701608F31D770C7E00B244F3 /* PontosVC.swift */,
 				705DE6A21D792F4A007355AE /* PontoCell.swift */,
 				70F7F2E71D7D1A8A00C71C11 /* DetailPontosVC.swift */,
@@ -109,6 +123,7 @@
 		701608EE1D77071500B244F3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				704791371D8784A9003F939C /* libsqlite3.0.tbd */,
 				70F7F2E11D7C6FB500C71C11 /* pontos.json */,
 			);
 			name = Resources;
@@ -187,12 +202,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				704791691D882FD2003F939C /* DataCore.xcdatamodeld in Sources */,
 				70DA4FB91D7E3ADA0090CB1B /* AboutVC.swift in Sources */,
 				70F7F2E01D79C47500C71C11 /* Extension.swift in Sources */,
+				704791731D886885003F939C /* Favorites.swift in Sources */,
 				701608E61D76817600B244F3 /* Pontos.swift in Sources */,
 				70F7F2E81D7D1A8A00C71C11 /* DetailPontosVC.swift in Sources */,
 				701608F41D770C7E00B244F3 /* PontosVC.swift in Sources */,
 				705DE6A31D792F4A007355AE /* PontoCell.swift in Sources */,
+				704791721D886885003F939C /* Favorites+CoreDataProperties.swift in Sources */,
 				701608D21D750DF800B244F3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +326,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Pontos/Info.plist;
@@ -315,6 +334,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tests.ts.Pontos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pontos/Pontos-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -323,6 +344,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Pontos/Info.plist;
@@ -330,6 +352,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tests.ts.Pontos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pontos/Pontos-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -356,6 +379,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		704791671D882FD2003F939C /* DataCore.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				704791681D882FD2003F939C /* DataCore.xcdatamodel */,
+			);
+			currentVersion = 704791681D882FD2003F939C /* DataCore.xcdatamodel */;
+			path = DataCore.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 701608C61D750DF800B244F3 /* Project object */;
 }

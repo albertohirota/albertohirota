@@ -17,16 +17,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_20cantigas_20de_20umbanda" translatesAutoresizingMaskIntoConstraints="NO" id="My0-6d-YFd">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saravá Congá" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pf-tm-eXs">
+                                <rect key="frame" x="215" y="20" width="170" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="LpB-Mx-1gK"/>
+                                    <constraint firstAttribute="height" constant="52" id="dMz-Pu-WNy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="atabaque" translatesAutoresizingMaskIntoConstraints="NO" id="My0-6d-YFd">
+                                <rect key="frame" x="20" y="20" width="560" height="560"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="My0-6d-YFd" secondAttribute="bottom" id="BFC-eO-1ot"/>
-                            <constraint firstAttribute="trailing" secondItem="My0-6d-YFd" secondAttribute="trailing" id="EzK-cK-102"/>
-                            <constraint firstItem="My0-6d-YFd" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="fTg-yz-xkb"/>
-                            <constraint firstItem="My0-6d-YFd" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="oCz-bz-zIv"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="My0-6d-YFd" secondAttribute="bottom" constant="20" id="BFC-eO-1ot"/>
+                            <constraint firstAttribute="trailing" secondItem="My0-6d-YFd" secondAttribute="trailing" constant="20" id="EzK-cK-102"/>
+                            <constraint firstItem="6pf-tm-eXs" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="Gmb-BN-ESS"/>
+                            <constraint firstItem="6pf-tm-eXs" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Usu-9f-cK0"/>
+                            <constraint firstItem="My0-6d-YFd" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="20" id="fTg-yz-xkb"/>
+                            <constraint firstItem="My0-6d-YFd" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="20" id="oCz-bz-zIv"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -36,6 +48,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Logo_20cantigas_20de_20umbanda" width="466" height="165"/>
+        <image name="atabaque" width="400" height="400"/>
     </resources>
 </document>

@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import StoreKit
+import CoreData
 
-class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UISearchBarDelegate, UISplitViewControllerDelegate, UIAlertViewDelegate {
+
+class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UISearchBarDelegate, UISplitViewControllerDelegate, UIAlertViewDelegate{
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var pontosPicker: UIPickerView!
     @IBOutlet weak var tableView: UITableView!
+
     var pontos = Pontos.createPontos()
     var selectTipo: [String] = [String]()
     var inPickerMode = false
@@ -24,7 +28,8 @@ class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
     var filteredSearcher = Pontos.createPontos()
     var filteredAndSearchPicker = Pontos.createPontos()
     var selectedPonto = Pontos()
-    
+    var product = [SKProduct]()
+
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -41,11 +46,36 @@ class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         tap.cancelsTouchesInView = false
         self.splitViewController?.preferredDisplayMode = .AllVisible
         self.splitViewController?.delegate = self
+        //requestProduct()
         
     }
+   
     
-    
-    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool {
+//    func requestProduct() {
+//        let ids: Set<String> = ["xxxxxxxxxx"]
+//        let productRequest = SKProductsRequest(productIdentifiers: ids)
+//        productRequest.delegate = self
+//        productRequest.start()
+//    }
+//    func productsRequest(request: SKProductsRequest, didReceiveResponse response: SKProductsResponse) {
+//        print("Product ready: \(response.products)")
+//        print("Product ready: \(response.products.count)")
+//        print("Product Not ready: \(response.invalidProductIdentifiers)")
+//        self.product = response.products
+//    }
+//    func openDatabase() -> COpaquePointer {
+//        //let path = NSBundle.mainBundle().pathForResource("Pontos", ofType: "sqlite")
+//        let documents = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
+//        let fileURL = documents.URLByAppendingPathComponent("Pontos.sqlite").path!
+//        var db: COpaquePointer = nil
+//        if sqlite3_open(fileURL!, &db) == SQLITE_OK {
+//            print(" Successfully opened connection to database at \(fileURL)")
+//            return db
+//        } else {
+//            print("Error to open Database")
+//        }
+//    }
+        func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool {
         return true
     }
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -102,20 +132,34 @@ class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
             if pickerSelected == "Todos" {
                 inPickerMode = false
                 tableView.reloadData()
+            } else if pickerSelected == "Desbloqueados" {
+                inPickerMode = true
+                filteredAndSearchPicker = filteredSearcher.filter({$0.locked == "0"})
+                tableView.reloadData()
+            } else if pickerSelected == "Favoritos" {
+            
             } else {
                 inPickerMode = true
                 filteredAndSearchPicker = filteredSearcher.filter({$0.tipo == pickerSelected})
                 tableView.reloadData()
             }
         } else {
-        if pickerSelected == "Todos" {
-            inPickerMode = false
-            tableView.reloadData()
-        } else {
-            inPickerMode = true
-            filteredPicker = pontos.filter({$0.tipo == pickerSelected})
-            tableView.reloadData()
-        }
+            if pickerSelected == "Todos" {
+                inPickerMode = false
+                tableView.reloadData()
+            } else if pickerSelected == "Desbloqueados" {
+                inPickerMode = true
+                filteredPicker = pontos.filter({$0.locked == "0"})
+                tableView.reloadData()
+            } else if pickerSelected == "Favoritos" {
+                inPickerMode = true
+                filteredPicker = pontos.filter({$0.favorito == true})
+                tableView.reloadData()
+            } else {
+                inPickerMode = true
+                filteredPicker = pontos.filter({$0.tipo == pickerSelected})
+                tableView.reloadData()
+            }
         }
     }
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
@@ -167,6 +211,8 @@ class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
                                     index = index + 1
                                 }
                                 selectTipo = selectTipo1.removeDuplicates()
+                                selectTipo.append("Favoritos")
+                                selectTipo.append("Desbloqueados")
                             }
                         }
                     }
@@ -179,6 +225,7 @@ class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
     func dismissKeyboard() {
         view.endEditing(true)
     }
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if inPickerMode && inSearchMode {
             let ponto = filteredAndSearchPicker[indexPath.row]

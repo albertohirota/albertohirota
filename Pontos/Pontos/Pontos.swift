@@ -8,6 +8,9 @@
 
 import UIKit
 import Foundation
+import CoreData
+
+
 
 struct Pontos {
     var id = " "
@@ -41,6 +44,7 @@ struct Pontos {
     var linha24 = " "
     var linha25 = " "
     var keyWord = " "
+    var favorito = false
     
     static func createPontos() -> [Pontos] {
        
@@ -87,6 +91,34 @@ struct Pontos {
                                 var linha24 = " "
                                 var linha25 = " "
                                 var keyWord = " "
+                                var favorites = [String]()
+                                var favorite: Bool
+                                
+                                func favoritesCheck() {
+                                    // fetch CoreData results, it always comes in an Array
+                                    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                                    let managedContext = appDelegate.managedObjectContext
+                                    let fetchRequest = NSFetchRequest(entityName: "Favorites")
+                                    do {
+                                        let results = try managedContext.executeFetchRequest(fetchRequest)
+                                        
+                                        //access attribute of result
+                                        if results.count > 0 {
+                                            var index = 0
+                                            while index != (results.count) {
+                                                let favoritesS = results[index] as! NSManagedObject
+                                                if let favorite = favoritesS.valueForKey("id") {
+                                                    favorites.append("\(favorite)")
+                                                    index = index + 1
+                                                }
+                                            }
+                                        }
+                                    } catch let err as NSError {
+                                        print(err.debugDescription)
+                                    }
+                                }
+                                
+                                favoritesCheck()
                                 
                                 while index != pCount {
                                     if let id1 = listP[index]["ID"] as? String {
@@ -96,7 +128,11 @@ struct Pontos {
                                         tipo = tipo1
                                     }
                                     if let locked1 = listP[index]["Locked"] as? String {
-                                        locked = locked1
+                                        if PontosVC.appPaid {
+                                            locked = "0"
+                                        } else {
+                                            locked = locked1
+                                        }
                                     }
                                     if let titulo1 = listP[index]["Titulo"] as? String {
                                         titulo = titulo1
@@ -182,8 +218,13 @@ struct Pontos {
                                     if let keyWord1 = listP[index]["KeyWord"] as? String {
                                             keyWord = keyWord1
                                     }
+                                    if favorites.contains(id) {
+                                        favorite = true
+                                    } else {
+                                        favorite = false
+                                    }
                                     
-                                    let dictP = Pontos(id: id, tipo: tipo, locked: locked, titulo: titulo, autor: autor, linha1: linha1, linha2: linha2, linha3: linha3, linha4: linha4, linha5: linha5, linha6: linha6, linha7: linha7, linha8: linha8, linha9: linha9, linha10: linha10, linha11: linha11, linha12: linha12, linha13: linha13, linha14: linha14, linha15: linha15, linha16: linha16, linha17: linha17, linha18: linha18, linha19: linha19, linha20: linha20, linha21: linha21, linha22: linha22, linha23: linha23, linha24: linha24, linha25: linha25, keyWord: keyWord)
+                                    let dictP = Pontos(id: id, tipo: tipo, locked: locked, titulo: titulo, autor: autor, linha1: linha1, linha2: linha2, linha3: linha3, linha4: linha4, linha5: linha5, linha6: linha6, linha7: linha7, linha8: linha8, linha9: linha9, linha10: linha10, linha11: linha11, linha12: linha12, linha13: linha13, linha14: linha14, linha15: linha15, linha16: linha16, linha17: linha17, linha18: linha18, linha19: linha19, linha20: linha20, linha21: linha21, linha22: linha22, linha23: linha23, linha24: linha24, linha25: linha25, keyWord: keyWord, favorito: favorite)
                                    
                                         dictPonto.append(dictP)
                                     

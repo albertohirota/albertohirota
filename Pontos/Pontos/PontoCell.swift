@@ -13,6 +13,9 @@ class PontoCell: UITableViewCell {
     @IBOutlet weak var pontoTipoLbl: UILabel!
     @IBOutlet weak var pontoLabel: UILabel!
     @IBOutlet weak var lockedImg: UIImageView!
+    @IBOutlet weak var favoriteImg: UIImageView!
+
+  
     var numb: CGFloat = 0
     
     override func awakeFromNib() {
@@ -29,20 +32,25 @@ class PontoCell: UITableViewCell {
     func configureCell(pontos: Pontos) {
         pontoLabel.text = pontos.titulo
         lock(pontos.locked)
-        
         pontoTipoLbl.text = pontos.tipo
+        favoriteTrue(pontos.favorito)
        
     }
     func lock(locked: String) {
-        if !PontosVC.appPaid {
-            if let n = NSNumberFormatter().numberFromString(locked) {
-                numb = CGFloat(n)
-                lockedImg.alpha = numb
-            }
-        } else {
-            lockedImg.alpha = 0
+        if let n = NSNumberFormatter().numberFromString(locked) {
+            numb = CGFloat(n)
+            lockedImg.alpha = numb
         }
     }
+    func favoriteTrue(favo: Bool) {
+        if favo {
+            favoriteImg.alpha = 1
+        } else {
+            favoriteImg.alpha = 0
+        }
+    }
+    
+    
 }
 
 
