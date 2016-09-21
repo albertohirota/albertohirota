@@ -50,11 +50,11 @@ struct Pontos {
        
         var dictPonto = [Pontos]()
         
-        if let path = NSBundle.mainBundle().pathForResource("pontos", ofType: "json") {
+        if let path = Bundle.main.path(forResource: "pontos", ofType: "json") {
             do {
-                let jsonData = NSData(contentsOfFile: path)
+                let jsonData = try? Data(contentsOf: URL(fileURLWithPath: path))
                 do {
-                    let jsonResult = try NSJSONSerialization.JSONObjectWithData(jsonData!, options: NSJSONReadingOptions.AllowFragments)
+                    let jsonResult = try JSONSerialization.jsonObject(with: jsonData!, options: JSONSerialization.ReadingOptions.allowFragments)
                     if let dictPont = jsonResult as? Dictionary<String, AnyObject> {
                         if let dataroot = dictPont["dataroot"] {
                             if let listP = dataroot["Ponto"] as? [Dictionary<String, AnyObject>] {
@@ -96,18 +96,18 @@ struct Pontos {
                                 
                                 func favoritesCheck() {
                                     // fetch CoreData results, it always comes in an Array
-                                    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
                                     let managedContext = appDelegate.managedObjectContext
-                                    let fetchRequest = NSFetchRequest(entityName: "Favorites")
+                                    let fetchRequest:NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "Favorites")
                                     do {
-                                        let results = try managedContext.executeFetchRequest(fetchRequest)
+                                        let results = try managedContext.fetch(fetchRequest)
                                         
                                         //access attribute of result
                                         if results.count > 0 {
                                             var index = 0
                                             while index != (results.count) {
                                                 let favoritesS = results[index] as! NSManagedObject
-                                                if let favorite = favoritesS.valueForKey("id") {
+                                                if let favorite = favoritesS.value(forKey: "id") {
                                                     favorites.append("\(favorite)")
                                                     index = index + 1
                                                 }

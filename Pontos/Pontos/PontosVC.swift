@@ -44,10 +44,13 @@ class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(PontosVC.dismissKeyboard))
         view.addGestureRecognizer(tap)
         tap.cancelsTouchesInView = false
-        self.splitViewController?.preferredDisplayMode = .AllVisible
+        self.splitViewController?.preferredDisplayMode = .allVisible
         self.splitViewController?.delegate = self
-        //requestProduct()
-        
+                //requestProduct()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+        print("reloadData")
     }
    
     
@@ -63,31 +66,19 @@ class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
 //        print("Product Not ready: \(response.invalidProductIdentifiers)")
 //        self.product = response.products
 //    }
-//    func openDatabase() -> COpaquePointer {
-//        //let path = NSBundle.mainBundle().pathForResource("Pontos", ofType: "sqlite")
-//        let documents = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
-//        let fileURL = documents.URLByAppendingPathComponent("Pontos.sqlite").path!
-//        var db: COpaquePointer = nil
-//        if sqlite3_open(fileURL!, &db) == SQLITE_OK {
-//            print(" Successfully opened connection to database at \(fileURL)")
-//            return db
-//        } else {
-//            print("Error to open Database")
-//        }
-//    }
-        func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool {
+    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
         return true
     }
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
             return selectTipo.count
     }
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return selectTipo[row]
     }
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if inPickerMode && inSearchMode {
             return self.filteredAndSearchPicker.count
         } else if inPickerMode {
@@ -98,22 +89,22 @@ class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
             return self.pontos.count
         }
     }
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if let cell = self.tableView!.dequeueReusableCellWithIdentifier("PontoCell", forIndexPath: indexPath) as? PontoCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = self.tableView!.dequeueReusableCell(withIdentifier: "PontoCell", for: indexPath) as? PontoCell {
             if inPickerMode && inSearchMode {
-                let ponto = self.filteredAndSearchPicker[indexPath.row]
+                let ponto = self.filteredAndSearchPicker[(indexPath as NSIndexPath).row]
                 cell.configureCell(ponto)
                 return cell
             } else if inSearchMode {
-                let ponto = self.filteredSearcher[indexPath.row]
+                let ponto = self.filteredSearcher[(indexPath as NSIndexPath).row]
                 cell.configureCell(ponto)
                 return cell
             } else if inPickerMode {
-                let ponto = self.filteredPicker[indexPath.row]
+                let ponto = self.filteredPicker[(indexPath as NSIndexPath).row]
                 cell.configureCell(ponto)
                 return cell
             } else {
-                let ponto = self.pontos[indexPath.row]
+                let ponto = self.pontos[(indexPath as NSIndexPath).row]
                 cell.configureCell(ponto)
                 return cell
             }
@@ -126,7 +117,7 @@ class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
 //        PontosVC.locked = false
 //        
 //    }
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         pickerSelected = selectTipo[row]
         if inSearchMode {
             if pickerSelected == "Todos" {
@@ -162,7 +153,7 @@ class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
             }
         }
     }
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if inPickerMode {
             if searchBar.text == nil || searchBar.text == "" {
                 inSearchMode = false
@@ -170,8 +161,8 @@ class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
                 tableView.reloadData()
             } else {
                 inSearchMode = true
-                let lower = searchBar.text!.lowercaseString
-                filteredAndSearchPicker = filteredPicker.filter({$0.keyWord.rangeOfString(lower) != nil})
+                let lower = searchBar.text!.lowercased()
+                filteredAndSearchPicker = filteredPicker.filter({$0.keyWord.range(of: lower) != nil})
                 tableView.reloadData()
             }
         } else {
@@ -181,21 +172,21 @@ class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
             tableView.reloadData()
         } else {
             inSearchMode = true
-            let lower = searchBar.text!.lowercaseString
-            filteredSearcher = pontos.filter({$0.keyWord.rangeOfString(lower) != nil})
+            let lower = searchBar.text!.lowercased()
+            filteredSearcher = pontos.filter({$0.keyWord.range(of: lower) != nil})
             tableView.reloadData()
-        }
+            }
         }
     }
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         view.endEditing(true)
     }
     func selectType() {
-        if let path = NSBundle.mainBundle().pathForResource("pontos", ofType: "json") {
+        if let path = Bundle.main.path(forResource: "pontos", ofType: "json") {
             do {
-                let jsonData = NSData(contentsOfFile: path)
+                let jsonData = try? Data(contentsOf: URL(fileURLWithPath: path))
                 do {
-                    let jsonResult = try NSJSONSerialization.JSONObjectWithData(jsonData!, options: NSJSONReadingOptions.AllowFragments)
+                    let jsonResult = try JSONSerialization.jsonObject(with: jsonData!, options: JSONSerialization.ReadingOptions.allowFragments)
                     if let dictPont = jsonResult as? Dictionary<String, AnyObject> {
                         if let dataroot = dictPont["dataroot"] {
                             if let listP = dataroot["Ponto"] as? [Dictionary<String, AnyObject>] {
@@ -225,40 +216,42 @@ class PontosVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
     func dismissKeyboard() {
         view.endEditing(true)
     }
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if inPickerMode && inSearchMode {
-            let ponto = filteredAndSearchPicker[indexPath.row]
+            let ponto = filteredAndSearchPicker[(indexPath as NSIndexPath).row]
             self.selectedPonto = ponto
         } else if inSearchMode {
-            let pontoS = filteredSearcher[indexPath.row]
+            let pontoS = filteredSearcher[(indexPath as NSIndexPath).row]
             self.selectedPonto = pontoS
         } else if inPickerMode {
-            let pontoP = filteredPicker[indexPath.row]
+            let pontoP = filteredPicker[(indexPath as NSIndexPath).row]
             self.selectedPonto = pontoP
         } else {
-            let ponto = self.pontos[indexPath.row]
+            let ponto = self.pontos[(indexPath as NSIndexPath).row]
             self.selectedPonto = ponto
         }
         if selectedPonto.locked == "1" {
-            let alert = UIAlertController(title: "Ponto Bloqueado", message: "Gostaria de adquirir o aplicativo e ter acesso a todos a mais de 1000 Pontos?", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "SIM", style: .Default, handler: { (action: UIAlertAction!) in
+            let alert = UIAlertController(title: "Ponto Bloqueado", message: "Gostaria de adquirir o aplicativo e ter acesso a todos a mais de 1000 Pontos?", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "SIM", style: .default, handler: { (action: UIAlertAction!) in
                 print("user clicked YES")
             }))
-            alert.addAction(UIAlertAction(title: "NÃO", style: .Cancel, handler: { (action: UIAlertAction!) in
+            alert.addAction(UIAlertAction(title: "NÃO", style: .cancel, handler: { (action: UIAlertAction!) in
                 print("User cancelled")
             }))
-            self.presentViewController(alert, animated: true, completion: nil)
+            self.present(alert, animated: true, completion: nil)
         } else {
-            performSegueWithIdentifier("DetailPontosVC", sender: nil)
+            performSegue(withIdentifier: "DetailPontosVC", sender: nil)
         }
     }
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DetailPontosVC" {
-            if let detailPontosVC = segue.destinationViewController as? DetailPontosVC {
+            if let detailPontosVC = segue.destination as? DetailPontosVC {
                 detailPontosVC.pontos = self.selectedPonto
             }
         }
+    }
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        self.tableView.reloadData()
     }
 }
 

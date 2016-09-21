@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		701608D21D750DF800B244F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701608D11D750DF800B244F3 /* AppDelegate.swift */; };
-		701608D71D750DF800B244F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 701608D51D750DF800B244F3 /* Main.storyboard */; };
 		701608D91D750DF800B244F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 701608D81D750DF800B244F3 /* Assets.xcassets */; };
 		701608DC1D750DF800B244F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 701608DA1D750DF800B244F3 /* LaunchScreen.storyboard */; };
 		701608E61D76817600B244F3 /* Pontos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701608E51D76817600B244F3 /* Pontos.swift */; };
@@ -18,6 +17,10 @@
 		704791721D886885003F939C /* Favorites+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704791701D886885003F939C /* Favorites+CoreDataProperties.swift */; };
 		704791731D886885003F939C /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704791711D886885003F939C /* Favorites.swift */; };
 		705DE6A31D792F4A007355AE /* PontoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705DE6A21D792F4A007355AE /* PontoCell.swift */; };
+		70B2CD5F1D8A144F002BA864 /* SignPainter.otf in Resources */ = {isa = PBXBuildFile; fileRef = 70B2CD5E1D8A144F002BA864 /* SignPainter.otf */; };
+		70B2CD611D8CADF0002BA864 /* SaudacaoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B2CD601D8CADF0002BA864 /* SaudacaoVC.swift */; };
+		70B2CD631D8CAFAC002BA864 /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B2CD621D8CAFAC002BA864 /* MaterialButton.swift */; };
+		70B2CD651D8CEABF002BA864 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70B2CD641D8CEABF002BA864 /* Main.storyboard */; };
 		70DA4FB91D7E3ADA0090CB1B /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DA4FB81D7E3ADA0090CB1B /* AboutVC.swift */; };
 		70F7F2E01D79C47500C71C11 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F7F2DF1D79C47500C71C11 /* Extension.swift */; };
 		70F7F2E21D7C6FB500C71C11 /* pontos.json in Resources */ = {isa = PBXBuildFile; fileRef = 70F7F2E11D7C6FB500C71C11 /* pontos.json */; };
@@ -27,7 +30,6 @@
 /* Begin PBXFileReference section */
 		701608CE1D750DF800B244F3 /* Pontos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pontos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		701608D11D750DF800B244F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		701608D61D750DF800B244F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		701608D81D750DF800B244F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		701608DB1D750DF800B244F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		701608DD1D750DF800B244F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -39,6 +41,10 @@
 		704791701D886885003F939C /* Favorites+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Favorites+CoreDataProperties.swift"; path = "../Favorites+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		704791711D886885003F939C /* Favorites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Favorites.swift; path = ../Favorites.swift; sourceTree = "<group>"; };
 		705DE6A21D792F4A007355AE /* PontoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PontoCell.swift; sourceTree = "<group>"; };
+		70B2CD5E1D8A144F002BA864 /* SignPainter.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SignPainter.otf; sourceTree = "<group>"; };
+		70B2CD601D8CADF0002BA864 /* SaudacaoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaudacaoVC.swift; sourceTree = "<group>"; };
+		70B2CD621D8CAFAC002BA864 /* MaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialButton.swift; sourceTree = "<group>"; };
+		70B2CD641D8CEABF002BA864 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		70DA4FB81D7E3ADA0090CB1B /* AboutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		70F7F2DF1D79C47500C71C11 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		70F7F2E11D7C6FB500C71C11 /* pontos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pontos.json; sourceTree = "<group>"; };
@@ -107,6 +113,7 @@
 				705DE6A21D792F4A007355AE /* PontoCell.swift */,
 				70F7F2E71D7D1A8A00C71C11 /* DetailPontosVC.swift */,
 				70DA4FB81D7E3ADA0090CB1B /* AboutVC.swift */,
+				70B2CD601D8CADF0002BA864 /* SaudacaoVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -114,8 +121,9 @@
 		701608ED1D77070200B244F3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				701608D51D750DF800B244F3 /* Main.storyboard */,
 				701608DA1D750DF800B244F3 /* LaunchScreen.storyboard */,
+				70B2CD621D8CAFAC002BA864 /* MaterialButton.swift */,
+				70B2CD641D8CEABF002BA864 /* Main.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -124,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				704791371D8784A9003F939C /* libsqlite3.0.tbd */,
+				70B2CD5E1D8A144F002BA864 /* SignPainter.otf */,
 				70F7F2E11D7C6FB500C71C11 /* pontos.json */,
 			);
 			name = Resources;
@@ -156,12 +165,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Alberto Hirota";
 				TargetAttributes = {
 					701608CD1D750DF800B244F3 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = A3NV6A7XU8;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -189,9 +199,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				701608DC1D750DF800B244F3 /* LaunchScreen.storyboard in Resources */,
+				70B2CD651D8CEABF002BA864 /* Main.storyboard in Resources */,
 				701608D91D750DF800B244F3 /* Assets.xcassets in Resources */,
+				70B2CD5F1D8A144F002BA864 /* SignPainter.otf in Resources */,
 				70F7F2E21D7C6FB500C71C11 /* pontos.json in Resources */,
-				701608D71D750DF800B244F3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,23 +220,17 @@
 				701608E61D76817600B244F3 /* Pontos.swift in Sources */,
 				70F7F2E81D7D1A8A00C71C11 /* DetailPontosVC.swift in Sources */,
 				701608F41D770C7E00B244F3 /* PontosVC.swift in Sources */,
+				70B2CD631D8CAFAC002BA864 /* MaterialButton.swift in Sources */,
 				705DE6A31D792F4A007355AE /* PontoCell.swift in Sources */,
 				704791721D886885003F939C /* Favorites+CoreDataProperties.swift in Sources */,
 				701608D21D750DF800B244F3 /* AppDelegate.swift in Sources */,
+				70B2CD611D8CADF0002BA864 /* SaudacaoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		701608D51D750DF800B244F3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				701608D61D750DF800B244F3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		701608DA1D750DF800B244F3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -251,8 +256,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -297,8 +304,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -317,6 +326,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -336,6 +346,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Pontos/Pontos-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -353,6 +364,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Pontos/Pontos-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

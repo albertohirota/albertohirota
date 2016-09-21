@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class DetailPontosVC: UIViewController {
+class DetailPontosVC: UIViewController, UIPopoverPresentationControllerDelegate {
     
     var pontos = Pontos()
     @IBOutlet weak var tituloLbl: UILabel!
@@ -41,18 +41,21 @@ class DetailPontosVC: UIViewController {
     @IBOutlet weak var twentyfiveLbl: UILabel!
     @IBOutlet weak var addFavoriteBtn: UIButton!
     @IBOutlet weak var favoriteImg: UIImageView!
+
+    @IBOutlet weak var hiddenImg: UIImageView!
     var favorites = [String]()
     var favor = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
         updatePonto()
-        addFavoriteBtn.layer.cornerRadius = 5.0
-        addFavoriteBtn.layer.shadowOpacity = 0.8
-        addFavoriteBtn.layer.shadowRadius = 5.0
-        addFavoriteBtn.layer.shadowOffset = CGSizeMake(0.0, 2.0)
+        hiddenImg.alpha = 0
+        saudacaoPress(self)
 
         // Do any additional setup after loading the view.
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        saudacaoPress(self)
     }
     func updatePonto() {
         favoritesCheck()
@@ -96,18 +99,18 @@ class DetailPontosVC: UIViewController {
     }
     func favoritesCheck() {
         // fetch CoreData results, it always comes in an Array
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
-        let fetchRequest = NSFetchRequest(entityName: "Favorites")
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "Favorites")
         do {
-            let results = try managedContext.executeFetchRequest(fetchRequest)
+            let results = try managedContext.fetch(fetchRequest)
             
             //access attribute of result
             if results.count > 0 {
                 var index = 0
                 while index != (results.count) {
                     let favoritesS = results[index] as! NSManagedObject
-                    if let favorite = favoritesS.valueForKey("id") {
+                    if let favorite = favoritesS.value(forKey: "id") {
                         favorites.append("\(favorite)")
                         print("\(index) - \(favorite)")
                         index = index + 1
@@ -118,32 +121,32 @@ class DetailPontosVC: UIViewController {
             print(err.debugDescription)
         }
     }
-    @IBAction func favoritePressed(sender: UIButton) {
-        let appDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-        let managedContext = appDelegate.managedObjectContext
-        
+    @IBAction func favoritePressed(_ sender: UIButton) {
         if !favor {
-            let entity = NSEntityDescription.entityForName("Favorites", inManagedObjectContext: managedContext)
-            let favorite = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
+            let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
+            let managedContext = appDelegate.managedObjectContext
+            let entity = NSEntityDescription.entity(forEntityName: "Favorites", in: managedContext)
+            let favorite = NSManagedObject(entity: entity!, insertInto: managedContext)
             favorite.setValue(pontos.id, forKey: "id")
-            managedContext.insertObject(favorite)
+            managedContext.insert(favorite)
             do {
                 try managedContext.save()
             } catch let error as NSError {
                 print("Could not save \(error), \(error.userInfo)")
             }
         } else {
-            let appDelegateD = (UIApplication.sharedApplication().delegate as! AppDelegate)
+            let appDelegateD = (UIApplication.shared.delegate as! AppDelegate)
             let managedContextD = appDelegateD.managedObjectContext
-            let fetchRequest = NSFetchRequest(entityName: "Favorites")
+            let fetchRequest:NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "Favorites")
             do {
-                let results = try managedContextD.executeFetchRequest(fetchRequest)
+                let results = try managedContextD.fetch(fetchRequest)
 
-                let index = favorites.indexOf(pontos.id)
+                let index = favorites.index(of: pontos.id)
                 let ponto = results[index!] as! NSManagedObject
-                managedContextD.deleteObject(ponto)
+                managedContextD.delete(ponto)
                 do {
                     try managedContextD.save()
+                    
                 } catch {
                     let fetchError = error as NSError
                     print(fetchError)
@@ -153,7 +156,28 @@ class DetailPontosVC: UIViewController {
                 print(fetchError)
             }
         }
+        DispatchQueue.main.async {
+            
+        }
         updatePonto()
+    }
+    
+    
+    
+    
+        @IBAction func saudacaoPress(_ sender: AnyObject) {
+        print("press")
+
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SaudacaoVC" {
+            let popoverVC = segue.destination 
+            popoverVC.modalPresentationStyle = UIModalPresentationStyle.popover
+            popoverVC.popoverPresentationController!.delegate = self
+        }
+    }
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.none
     }
 }
     

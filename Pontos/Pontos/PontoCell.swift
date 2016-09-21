@@ -23,34 +23,31 @@ class PontoCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
-    func configureCell(pontos: Pontos) {
+    func configureCell(_ pontos: Pontos) {
         pontoLabel.text = pontos.titulo
         lock(pontos.locked)
         pontoTipoLbl.text = pontos.tipo
         favoriteTrue(pontos.favorito)
-       
     }
-    func lock(locked: String) {
-        if let n = NSNumberFormatter().numberFromString(locked) {
+    func lock(_ locked: String) {
+        if let n = NumberFormatter().number(from: locked) {
             numb = CGFloat(n)
             lockedImg.alpha = numb
         }
     }
-    func favoriteTrue(favo: Bool) {
+    func favoriteTrue(_ favo: Bool) {
         if favo {
             favoriteImg.alpha = 1
         } else {
             favoriteImg.alpha = 0
         }
     }
-    
-    
 }
 
 

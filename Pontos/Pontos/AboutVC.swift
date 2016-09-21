@@ -14,15 +14,11 @@ class AboutVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        restoreButton.layer.cornerRadius = 5.0
-        restoreButton.layer.shadowOpacity = 0.8
-        restoreButton.layer.shadowRadius = 5.0
-        restoreButton.layer.shadowOffset = CGSizeMake(0.0, 2.0)
         // Do any additional setup after loading the view.
     }
 
     
-    @IBAction func restoreBtn(sender: AnyObject) {
+    @IBAction func restoreBtn(_ sender: AnyObject) {
     }
     
     
